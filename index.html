@@ -360,6 +360,13 @@
     border-radius: 2px; background: var(--teal-pale);
     color: var(--teal); border: 1px solid var(--teal-light);
   }
+  a.project-card { display: block; text-decoration: none; cursor: pointer; }
+  a.project-card .project-title { transition: color 0.2s; }
+  a.project-card:hover .project-title { color: var(--teal); }
+  .project-link {
+    font-size: 12px; font-weight: 600; color: var(--teal);
+    margin-top: 16px; display: inline-block;
+  }
 
   /* ── CONTACT ── */
   #contact { border-top: 1px solid var(--rule); }
@@ -844,6 +851,17 @@
         <span class="project-tool">Quality Assurance</span>
       </div>
     </div>
+    <a class="project-card" href="https://github.com/Caroline-musyoka/data-cleaning-ecommerce-orders" target="_blank" rel="noopener">
+      <div class="project-num">05</div>
+      <div class="project-title">E-Commerce Order Data Cleaning &amp; Preparation</div>
+      <div class="project-desc">Cleaned and validated a 1,200-row e-commerce orders dataset — handled missing values, fixed floating-point precision errors, standardized date formats and text casing, and documented every change in an audit-ready change log with verification gates.</div>
+      <div class="project-tools">
+        <span class="project-tool">Excel</span>
+        <span class="project-tool">Python (pandas)</span>
+        <span class="project-tool">Data Cleaning</span>
+      </div>
+      <span class="project-link">View on GitHub →</span>
+    </a>
   </div>
 </div>
 
