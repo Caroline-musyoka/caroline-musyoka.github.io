@@ -360,13 +360,6 @@
     border-radius: 2px; background: var(--teal-pale);
     color: var(--teal); border: 1px solid var(--teal-light);
   }
-  a.project-card { display: block; text-decoration: none; cursor: pointer; }
-  a.project-card .project-title { transition: color 0.2s; }
-  a.project-card:hover .project-title { color: var(--teal); }
-  .project-link {
-    font-size: 12px; font-weight: 600; color: var(--teal);
-    margin-top: 16px; display: inline-block;
-  }
 
   /* ── CONTACT ── */
   #contact { border-top: 1px solid var(--rule); }
@@ -810,69 +803,181 @@
     <h2>Work Samples</h2>
     <span>Projects</span>
   </div>
-  <div class="projects-grid fade-up">
-    <div class="project-card">
-      <div class="project-num">01</div>
-      <div class="project-title">KES Bookkeeping Template</div>
-      <div class="project-desc">A custom Excel bookkeeping template built for Kenyan businesses — KES-formatted with five sheets: Dashboard, Chart of Accounts, Income & Expenses, Bank Reconciliation, and Transaction Log. Includes dynamic formulas and an automated summary dashboard.</div>
-      <div class="project-tools">
-        <span class="project-tool">Microsoft Excel</span>
-        <span class="project-tool">Pivot Tables</span>
-        <span class="project-tool">Financial Dashboards</span>
+
+  <style>
+    .projects-grid-new {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+      max-width: 1100px; margin: 0 auto; padding: 0 40px;
+    }
+    .project-card-new {
+      background: white; border: 1px solid var(--rule);
+      transition: all 0.25s; overflow: hidden;
+    }
+    .project-card-new:hover { box-shadow: 0 8px 32px rgba(27,107,90,0.12); }
+    .project-img-wrap {
+      width: 100%; aspect-ratio: 3/2; overflow: hidden;
+      background: var(--teal-light); position: relative;
+    }
+    .project-img-wrap img {
+      width: 100%; height: 100%; object-fit: cover;
+      object-position: top left;
+      transition: transform 0.4s ease;
+    }
+    .project-card-new:hover .project-img-wrap img { transform: scale(1.03); }
+    .project-img-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-mid) 100%);
+      font-family: 'DM Serif Display', serif;
+      font-size: 48px; color: rgba(255,255,255,0.15);
+    }
+    .project-body { padding: 28px 28px 24px; }
+    .project-cat {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 8px;
+    }
+    .project-title-new {
+      font-size: 17px; font-weight: 600; color: var(--ink);
+      margin-bottom: 10px; line-height: 1.35;
+    }
+    .project-desc-new {
+      font-size: 13.5px; color: var(--ink-soft);
+      line-height: 1.75; font-weight: 300; margin-bottom: 16px;
+    }
+    .project-tools-new { display: flex; flex-wrap: wrap; gap: 6px; }
+    .project-tool-new {
+      font-size: 11px; font-weight: 500; padding: 4px 10px;
+      border-radius: 2px; background: var(--teal-pale);
+      color: var(--teal); border: 1px solid var(--teal-light);
+    }
+    .project-actions {
+      display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap;
+    }
+    .btn-download {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+      text-transform: uppercase; padding: 9px 18px;
+      border-radius: 2px; text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-download.primary {
+      background: var(--teal); color: white; border: 2px solid var(--teal);
+    }
+    .btn-download.primary:hover { background: var(--teal-mid); border-color: var(--teal-mid); }
+    .btn-download.secondary {
+      background: transparent; color: var(--teal);
+      border: 2px solid var(--teal-light);
+    }
+    .btn-download.secondary:hover { border-color: var(--teal); background: var(--teal-pale); }
+    @media (max-width: 700px) {
+      .projects-grid-new { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <div class="projects-grid-new fade-up">
+
+    <!-- Project 1 -->
+    <div class="project-card-new">
+      <div class="project-img-wrap">
+        <img src="Project1_Bookkeeping_Report.png"
+             alt="Monthly Bookkeeping Report showing P&L Statement and Balance Sheet"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-placeholder\'>01</div>'"/>
+      </div>
+      <div class="project-body">
+        <div class="project-cat">Bookkeeping · Financial Reporting</div>
+        <div class="project-title-new">Monthly Bookkeeping Report — P&L & Balance Sheet</div>
+        <div class="project-desc-new">Prepared a full monthly bookkeeping report for a consulting firm covering Q1 2026. Includes a 3-month Profit & Loss Statement with revenue breakdown, operating expenses, net profit, and margin analysis — plus a complete Balance Sheet with assets, liabilities, and owner's equity.</div>
+        <div class="project-tools-new">
+          <span class="project-tool-new">QuickBooks Online</span>
+          <span class="project-tool-new">Microsoft Excel</span>
+          <span class="project-tool-new">Financial Reporting</span>
+          <span class="project-tool-new">Balance Sheet</span>
+        </div>
+        <div class="project-actions">
+          <a href="Monthly_Bookkeeping_Report.xlsx" download class="btn-download primary">
+            ↓ Download Excel
+          </a>
+          <a href="Project1_Bookkeeping_Report.png" target="_blank" class="btn-download secondary">
+            ↗ View Screenshot
+          </a>
+        </div>
       </div>
     </div>
-    <div class="project-card">
-      <div class="project-num">02</div>
-      <div class="project-title">Remote Bookkeeping — Private Client</div>
-      <div class="project-desc">Three-year remote bookkeeping engagement for a private company. Delivered monthly financial reports, maintained clean QBO records, performed bank reconciliations, and managed AP/AR processes throughout the engagement.</div>
-      <div class="project-tools">
-        <span class="project-tool">QuickBooks Online</span>
-        <span class="project-tool">Bank Reconciliation</span>
-        <span class="project-tool">Financial Reporting</span>
+
+    <!-- Project 2 -->
+    <div class="project-card-new">
+      <div class="project-img-wrap">
+        <img src="Project2_KPI_Dashboard.png"
+             alt="Financial KPI Dashboard showing quarterly metrics and revenue chart"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-placeholder\'>02</div>'"/>
+      </div>
+      <div class="project-body">
+        <div class="project-cat">Data Visualization · Excel</div>
+        <div class="project-title-new">Financial KPI Dashboard — FY 2025/2026</div>
+        <div class="project-desc-new">Designed a full-year KPI dashboard tracking 8 financial metrics across Q1–Q4 including revenue, gross margin, net profit margin, and expense ratio. Features quarterly target tracking, a revenue vs profit bar chart, and color-coded performance indicators.</div>
+        <div class="project-tools-new">
+          <span class="project-tool-new">Microsoft Excel</span>
+          <span class="project-tool-new">Pivot Tables</span>
+          <span class="project-tool-new">Data Visualization</span>
+          <span class="project-tool-new">KPI Tracking</span>
+        </div>
+        <div class="project-actions">
+          <a href="Financial_KPI_Dashboard.xlsx" download class="btn-download primary">
+            ↓ Download Excel
+          </a>
+          <a href="Project2_KPI_Dashboard.png" target="_blank" class="btn-download secondary">
+            ↗ View Screenshot
+          </a>
+        </div>
       </div>
     </div>
-    <div class="project-card">
-      <div class="project-num">03</div>
-      <div class="project-title">Financial Transcript Editing</div>
-      <div class="project-desc">Edited and proofread financial transcripts at scale for Remoat Teams, applying client-specific style guidelines to high-volume financial content. Maintained accuracy and consistency across a 10-month remote contract.</div>
-      <div class="project-tools">
-        <span class="project-tool">Proofreading</span>
-        <span class="project-tool">Financial Documentation</span>
-        <span class="project-tool">Remote Work</span>
+
+    <!-- Project 3 -->
+    <div class="project-card-new">
+      <div class="project-img-wrap">
+        <img src="Project3_Invoice_Processing.png"
+             alt="Invoice Processing Sample showing raw data cleaned into audit-ready records"
+             onerror="this.parentElement.innerHTML='<div class=\'project-img-placeholder\'>03</div>'"/>
+      </div>
+      <div class="project-body">
+        <div class="project-cat">Data Cleaning · AI-Assisted Workflows</div>
+        <div class="project-title-new">AI-Assisted Invoice Processing & Data Cleaning</div>
+        <div class="project-desc-new">End-to-end invoice processing workflow — 12 raw invoices with formatting errors, duplicates, missing categories, and currency mismatches transformed into a clean, audit-ready dataset. Identified 2 duplicate invoices, standardized all formats, and delivered a reconciled KES 909,200 summary.</div>
+        <div class="project-tools-new">
+          <span class="project-tool-new">Data Cleaning</span>
+          <span class="project-tool-new">AI Workflows</span>
+          <span class="project-tool-new">Invoice Processing</span>
+          <span class="project-tool-new">Excel</span>
+        </div>
+        <div class="project-actions">
+          <a href="Invoice_Processing_Sample.xlsx" download class="btn-download primary">
+            ↓ Download Excel
+          </a>
+          <a href="Project3_Invoice_Processing.png" target="_blank" class="btn-download secondary">
+            ↗ View Screenshot
+          </a>
+        </div>
       </div>
     </div>
-    <div class="project-card">
-      <div class="project-num">04</div>
-      <div class="project-title">AI Training Data Annotation</div>
-      <div class="project-desc">Contributed to machine learning model improvement at iMerit Scholars by annotating and validating datasets. Applied consistent labeling standards across large data volumes with high accuracy rates in a fully remote setup.</div>
-      <div class="project-tools">
-        <span class="project-tool">Data Annotation</span>
-        <span class="project-tool">AI Training</span>
-        <span class="project-tool">Quality Assurance</span>
+
+    <!-- Project 4 — existing -->
+    <div class="project-card-new">
+      <div class="project-img-wrap">
+        <div class="project-img-placeholder">04</div>
+      </div>
+      <div class="project-body">
+        <div class="project-cat">Bookkeeping · Remote Work</div>
+        <div class="project-title-new">Remote Bookkeeping — Private Client (3 Years)</div>
+        <div class="project-desc-new">Three-year remote bookkeeping engagement for a private company. Delivered monthly financial reports, maintained clean QuickBooks Online records, performed bank reconciliations, and managed AP/AR processes throughout the engagement.</div>
+        <div class="project-tools-new">
+          <span class="project-tool-new">QuickBooks Online</span>
+          <span class="project-tool-new">Bank Reconciliation</span>
+          <span class="project-tool-new">Financial Reporting</span>
+          <span class="project-tool-new">Remote Work</span>
+        </div>
       </div>
     </div>
-    <a class="project-card" href="https://github.com/Caroline-musyoka/data-cleaning-ecommerce-orders" target="_blank" rel="noopener">
-      <div class="project-num">05</div>
-      <div class="project-title">E-Commerce Order Data Cleaning &amp; Preparation</div>
-      <div class="project-desc">Cleaned and validated a 1,200-row e-commerce orders dataset — handled missing values, fixed floating-point precision errors, standardized date formats and text casing, and documented every change in an audit-ready change log with verification gates.</div>
-      <div class="project-tools">
-        <span class="project-tool">Excel</span>
-        <span class="project-tool">Python (pandas)</span>
-        <span class="project-tool">Data Cleaning</span>
-      </div>
-      <span class="project-link">View on GitHub →</span>
-    </a>
-    <a class="project-card" href="https://github.com/Caroline-musyoka/eda-ecommerce-orders" target="_blank" rel="noopener">
-      <div class="project-num">06</div>
-      <div class="project-title">E-Commerce Orders: Exploratory Data Analysis</div>
-      <div class="project-desc">Analyzed 1,200 cleaned e-commerce orders to uncover patterns and trends — identified a right-skewed order value distribution, validated 8 high-value orders as legitimate bulk purchases (not errors), and surfaced $519,674 in revenue tied up in cancelled or returned orders.</div>
-      <div class="project-tools">
-        <span class="project-tool">Excel</span>
-        <span class="project-tool">Python (pandas, matplotlib)</span>
-        <span class="project-tool">Exploratory Data Analysis</span>
-      </div>
-      <span class="project-link">View on GitHub →</span>
-    </a>
+
   </div>
 </div>
 
