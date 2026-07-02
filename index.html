@@ -804,6 +804,222 @@
     <span>Projects</span>
   </div>
 
+  <!-- ── FEATURED PROJECT: Heritage Humane Society QBO ── -->
+  <style>
+    .featured-project {
+      max-width: 1100px; margin: 0 auto 4px; padding: 0 40px 40px;
+    }
+    .featured-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--teal);
+      display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+    }
+    .featured-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+    .featured-inner {
+      background: white; border: 1px solid var(--rule); overflow: hidden;
+    }
+    .featured-top {
+      background: var(--teal); padding: 32px 40px;
+      display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center;
+    }
+    .featured-org { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+    .featured-title { font-family: 'DM Serif Display', serif; font-size: 28px; color: white; line-height: 1.2; margin-bottom: 10px; }
+    .featured-sub { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.7; font-weight: 300; }
+    .featured-stats { display: flex; gap: 24px; flex-wrap: wrap; }
+    .feat-stat { text-align: right; }
+    .feat-stat-num { font-family: 'DM Serif Display', serif; font-size: 28px; color: #9FE1CB; line-height: 1; }
+    .feat-stat-label { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .featured-reports {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;
+    }
+    .report-thumb {
+      position: relative; overflow: hidden; cursor: pointer;
+      border-right: 1px solid var(--rule);
+      aspect-ratio: 4/3;
+    }
+    .report-thumb:last-child { border-right: none; }
+    .report-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top left; transition: transform 0.4s; }
+    .report-thumb:hover img { transform: scale(1.05); }
+    .report-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(27,107,90,0.92));
+      padding: 28px 12px 10px; opacity: 0; transition: opacity 0.3s;
+    }
+    .report-thumb:hover .report-overlay { opacity: 1; }
+    .report-name { font-size: 11px; font-weight: 600; color: white; text-align: center; line-height: 1.4; }
+    .featured-body { padding: 32px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .feat-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.85; font-weight: 300; }
+    .feat-desc strong { color: var(--ink); font-weight: 500; }
+    .feat-skills { }
+    .feat-skills-title { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+    .feat-skill-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .feat-skill {
+      font-size: 11px; font-weight: 500; padding: 5px 12px;
+      border-radius: 2px; background: var(--teal-pale);
+      color: var(--teal); border: 1px solid var(--teal-light);
+    }
+    .featured-footer {
+      border-top: 1px solid var(--rule); padding: 16px 40px;
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    }
+    @media (max-width: 900px) {
+      .featured-top { grid-template-columns: 1fr; }
+      .featured-stats { flex-direction: row; }
+      .feat-stat { text-align: left; }
+      .featured-reports { grid-template-columns: repeat(3, 1fr); }
+      .featured-body { grid-template-columns: 1fr; gap: 24px; }
+    }
+    @media (max-width: 600px) {
+      .featured-reports { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+
+  <div class="featured-project fade-up">
+    <div class="featured-label">★ Featured Project</div>
+    <div class="featured-inner">
+
+      <!-- HERO HEADER -->
+      <div class="featured-top">
+        <div>
+          <div class="featured-org">Nonprofit QuickBooks Online Case Study — Heritage Humane Society, Williamsburg VA</div>
+          <div class="featured-title">Full-Cycle QBO Bookkeeping<br>from Setup to Financial Statements</div>
+          <div class="featured-sub">Built a complete QuickBooks Online Accountant environment for a real nonprofit — chart of accounts, 16 donors, 11 vendors, 6 program classes, 12 months of accrual-basis transactions, and year-end adjusting entries — all reconciled to within 1.6% of IRS Form 990 public data.</div>
+        </div>
+        <div class="featured-stats">
+          <div class="feat-stat">
+            <div class="feat-stat-num">$1.8M</div>
+            <div class="feat-stat-label">Revenue Recorded</div>
+          </div>
+          <div class="feat-stat">
+            <div class="feat-stat-num">12</div>
+            <div class="feat-stat-label">Months of Transactions</div>
+          </div>
+          <div class="feat-stat">
+            <div class="feat-stat-num">47</div>
+            <div class="feat-stat-label">Accounts in COA</div>
+          </div>
+          <div class="feat-stat">
+            <div class="feat-stat-num">11</div>
+            <div class="feat-stat-label">Phases Completed</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW LABEL: QBO SETUP SCREENSHOTS -->
+      <div style="background:#F2FAF8; border-top: 1px solid #D4E8E2; border-bottom:1px solid #D4E8E2; padding: 10px 28px; display:flex; align-items:center; gap:10px;">
+        <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#1B6B5A;">Live QBO Screenshots</span>
+        <span style="font-size:12px; color:#777; font-style:italic;">— Actual QuickBooks Online Accountant interface showing setup work</span>
+      </div>
+
+      <!-- ROW 1: 3 Live QBO Screenshots -->
+      <div class="featured-reports" style="grid-template-columns: repeat(3,1fr);">
+        <div class="report-thumb">
+          <img src="QBO_Customers_List_1.png" alt="Donor and Customer List Page 1 in QuickBooks Online" onerror="this.style.background='#E8F5F1'"/>
+          <div class="report-overlay">
+            <div class="report-name">Donor List — Foundations & Government</div>
+          </div>
+        </div>
+        <div class="report-thumb">
+          <img src="QBO_Customers_List_2.png" alt="Donor and Customer List Page 2 in QuickBooks Online" onerror="this.style.background='#E8F5F1'"/>
+          <div class="report-overlay">
+            <div class="report-name">Donor List — Individual & Corporate Donors</div>
+          </div>
+        </div>
+        <div class="report-thumb">
+          <img src="QBO_Classes_Live.png" alt="6 Program Classes set up in QuickBooks Online" onerror="this.style.background='#E8F5F1'"/>
+          <div class="report-overlay">
+            <div class="report-name">6 Program Classes — FASB ASC 958 Tracking</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW LABEL: FINANCIAL REPORTS -->
+      <div style="background:#F2FAF8; border-top: 1px solid #D4E8E2; border-bottom:1px solid #D4E8E2; padding: 10px 28px; display:flex; align-items:center; gap:10px;">
+        <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#1B6B5A;">Generated Financial Reports</span>
+        <span style="font-size:12px; color:#777; font-style:italic;">— Exported from QBO after 12-month transaction recording</span>
+      </div>
+
+      <!-- ROW 2: 4 Financial Report Thumbnails + 1 Classes -->
+      <div class="featured-reports" style="grid-template-columns: repeat(4,1fr);">
+        <div class="report-thumb">
+          <img src="QBO_Statement_of_Activity.png" alt="Statement of Activity" onerror="this.style.background='#E8F5F1'"/>
+          <div class="report-overlay"><div class="report-name">Statement of Activity (P&L)</div></div>
+        </div>
+        <div class="report-thumb">
+          <img src="QBO_Statement_of_Financial_Position.png" alt="Statement of Financial Position" onerror="this.style.background='#E8F5F1'"/>
+          <div class="report-overlay"><div class="report-name">Statement of Financial Position</div></div>
+        </div>
+        <div class="report-thumb">
+          <img src="QBO_Statement_of_Activity_by_Class.png" alt="Statement of Activity by Class" onerror="this.style.background='#E8F5F1'"/>
+          <div class="report-overlay"><div class="report-name">Activity by Class (6 Programs)</div></div>
+        </div>
+        <div class="report-thumb">
+          <img src="QBO_Statement_of_Cash_Flows.png" alt="Statement of Cash Flows" onerror="this.style.background='#E8F5F1'"/>
+          <div class="report-overlay"><div class="report-name">Statement of Cash Flows</div></div>
+        </div>
+      </div>
+
+      <!-- BODY: Description + Process + Skills -->
+      <div class="featured-body" style="grid-template-columns: 1fr 1fr 1fr; gap:32px;">
+
+        <div class="feat-desc">
+          <div class="feat-skills-title" style="margin-bottom:10px;">About This Project</div>
+          Used ProPublica's Nonprofit Explorer to source real IRS Form 990 data for <strong>Heritage Humane Society</strong> (FY2024: $1,772,742 revenue). Reconstructed their complete books in QBO — building from scratch, recording every transaction, and generating all four nonprofit financial statements. Final figures reconcile to <strong>within 1.6% of Form 990 reported totals.</strong>
+        </div>
+
+        <div>
+          <div class="feat-skills-title" style="margin-bottom:10px;">11-Phase Process</div>
+          <div style="font-size:13px; color:var(--ink-soft); line-height:1.9; font-weight:300;">
+            ✦ Research &amp; planning from IRS 990 data<br>
+            ✦ QBOA company setup (accrual, classes, fiscal year)<br>
+            ✦ 47-account Chart of Accounts via CSV import<br>
+            ✦ Opening balances journal entry (JE-001)<br>
+            ✦ 11 vendors + 16 donors imported via CSV<br>
+            ✦ 6 program classes for FASB ASC 958 compliance<br>
+            ✦ 12 months income &amp; expense transactions<br>
+            ✦ Bank feed import &amp; categorization<br>
+            ✦ Error identification &amp; correction (duplicates, wrong accounts)<br>
+            ✦ Year-end adjusting entries (depreciation, payroll accrual)<br>
+            ✦ Full nonprofit financial statement generation
+          </div>
+        </div>
+
+        <div class="feat-skills">
+          <div class="feat-skills-title" style="margin-bottom:10px;">Skills Demonstrated</div>
+          <div class="feat-skill-list">
+            <span class="feat-skill">QuickBooks Online Accountant</span>
+            <span class="feat-skill">Nonprofit Accounting</span>
+            <span class="feat-skill">Chart of Accounts Design</span>
+            <span class="feat-skill">Class Tracking</span>
+            <span class="feat-skill">Accrual Basis Bookkeeping</span>
+            <span class="feat-skill">Journal Entries</span>
+            <span class="feat-skill">Depreciation</span>
+            <span class="feat-skill">Bank Feed Import</span>
+            <span class="feat-skill">Vendor & Donor Management</span>
+            <span class="feat-skill">FASB ASC 958</span>
+            <span class="feat-skill">IRS Form 990 Reconciliation</span>
+            <span class="feat-skill">Error Correction</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER: Download buttons -->
+      <div class="featured-footer">
+        <span style="font-size:12px; color:var(--ink-soft); font-weight:500; margin-right:4px;">Download Reports:</span>
+        <a href="Statement_of_Activity.pdf" target="_blank" class="btn-download primary">↗ Statement of Activity</a>
+        <a href="Statement_of_Financial_Position.pdf" target="_blank" class="btn-download secondary">↗ Financial Position</a>
+        <a href="Statement_of_Activity_by_Class.pdf" target="_blank" class="btn-download secondary">↗ Activity by Class</a>
+        <a href="Statement_of_Cash_Flows.pdf" target="_blank" class="btn-download secondary">↗ Cash Flows</a>
+        <a href="QuickBooks_classes.pdf" target="_blank" class="btn-download secondary">↗ Classes Setup</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── OTHER PROJECTS GRID ── -->
+  <div class="section-label fade-up" style="max-width:1100px; margin: 48px auto 24px; padding:0 40px;">
+    <h2 style="font-size:22px; font-family:'DM Serif Display',serif; font-weight:400;">More Projects</h2>
+  </div>
   <style>
     .projects-grid-new {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
