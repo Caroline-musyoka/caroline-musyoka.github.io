@@ -466,12 +466,12 @@
 <nav>
   <div class="nav-logo">Caroline Musyoka</div>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});return false;">About</a></li>
+    <li><a href="#services" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});return false;">Services</a></li>
+    <li><a href="#projects" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'});return false;">Projects</a></li>
+    <li><a href="#tools" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'});return false;">Tools</a></li>
+    <li><a href="#clients-section" onclick="document.getElementById('clients-section').scrollIntoView({behavior:'smooth'});return false;">Clients</a></li>
+    <li><a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Contact</a></li>
   </ul>
 </nav>
 
@@ -490,8 +490,8 @@
       <strong>QuickBooks Certified Bookkeeper</strong> with a BCom in Finance. Delivering clean books, accurate reports, and AI-powered workflows for businesses and organizations worldwide.
     </p>
     <div class="hero-cta">
-      <a href="#contact" class="btn-primary">Hire Me</a>
-      <a href="#services" class="btn-secondary">View Services</a>
+      <a href="#contact" class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Hire Me</a>
+      <a href="#services" class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});return false;">View Services</a>
     </div>
   </div>
   <div class="hero-right">
@@ -764,6 +764,538 @@
     </div>
   </div>
 </div>
+
+
+<!-- TOOLS & TECHNOLOGY -->
+<section id="tools" style="background: var(--off-white); max-width:100%; padding: 96px 0;">
+  <div style="max-width:1100px; margin:0 auto; padding:0 40px;">
+
+    <div class="section-label fade-up">
+      <h2>Tools & Technology</h2>
+      <span>Tech Stack</span>
+    </div>
+
+    <style>
+      .tools-section { margin-bottom: 48px; }
+      .tools-section-title {
+        font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+        text-transform: uppercase; color: var(--teal);
+        display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+      }
+      .tools-section-title::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+      .tools-grid {
+        display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px;
+      }
+      .tool-card {
+        background: white; border: 1px solid var(--rule);
+        border-radius: 4px; padding: 16px 12px;
+        display: flex; flex-direction: column; align-items: center; gap: 10px;
+        transition: all 0.2s; cursor: default;
+      }
+      .tool-card:hover { box-shadow: 0 4px 16px rgba(27,107,90,0.1); transform: translateY(-2px); border-color: var(--teal-light); }
+      .tool-logo {
+        width: 42px; height: 42px; border-radius: 8px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 11px; font-weight: 700; letter-spacing: 0.02em;
+        flex-shrink: 0;
+      }
+      .tool-name { font-size: 12px; font-weight: 500; color: var(--ink); text-align: center; line-height: 1.3; }
+      .tool-type { font-size: 10px; color: var(--ink-soft); text-align: center; }
+      .proficiency-bar { width: 100%; height: 3px; background: var(--rule); border-radius: 2px; margin-top: 4px; }
+      .proficiency-fill { height: 100%; border-radius: 2px; background: var(--teal); }
+      .prof-expert { width: 100%; }
+      .prof-proficient { width: 75%; }
+      .prof-familiar { width: 50%; }
+    </style>
+
+    <!-- ACCOUNTING & BOOKKEEPING -->
+    <div class="tools-section fade-up">
+      <div class="tools-section-title">Accounting & Bookkeeping Platforms</div>
+      <div class="tools-grid">
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#2CA01C; color:white;">QBO</div>
+          <div class="tool-name">QuickBooks Online</div>
+          <div class="tool-type">Certified ★</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#00B4D8; color:white;">XER</div>
+          <div class="tool-name">Xero</div>
+          <div class="tool-type">Hands-on Experience</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#E8501A; color:white;">FW</div>
+          <div class="tool-name">FreshBooks</div>
+          <div class="tool-type">Invoicing & Bookkeeping</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#1D3557; color:white;">WV</div>
+          <div class="tool-name">Wave Accounting</div>
+          <div class="tool-type">Free Bookkeeping</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#5C2D91; color:white;">SAP</div>
+          <div class="tool-name">SAP Business One</div>
+          <div class="tool-type">ERP / Accounting</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#FF6B35; color:white;">ZB</div>
+          <div class="tool-name">Zoho Books</div>
+          <div class="tool-type">SME Accounting</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SPREADSHEETS & DATA -->
+    <div class="tools-section fade-up">
+      <div class="tools-section-title">Spreadsheets & Data Analysis</div>
+      <div class="tools-grid">
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#217346; color:white;">XLS</div>
+          <div class="tool-name">Microsoft Excel</div>
+          <div class="tool-type">Advanced ★</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#0F9D58; color:white;">GS</div>
+          <div class="tool-name">Google Sheets</div>
+          <div class="tool-type">Dashboards & Analysis</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#E2711D; color:white;">GD</div>
+          <div class="tool-name">Google Data Studio</div>
+          <div class="tool-type">Reporting & Charts</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#F2C811; color:#333;">PBI</div>
+          <div class="tool-name">Power BI</div>
+          <div class="tool-type">Data Visualization</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#1A7ABF; color:white;">PPT</div>
+          <div class="tool-name">PowerPoint</div>
+          <div class="tool-type">Financial Presentations</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#4285F4; color:white;">GD</div>
+          <div class="tool-name">Google Docs</div>
+          <div class="tool-type">Reports & Documentation</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CRM & COMMUNICATION -->
+    <div class="tools-section fade-up">
+      <div class="tools-section-title">CRM, Communication & Collaboration</div>
+      <div class="tools-grid">
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#25D366; color:white;">WA</div>
+          <div class="tool-name">WhatsApp Business</div>
+          <div class="tool-type">Client Communication</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#4A154B; color:white;">SLK</div>
+          <div class="tool-name">Slack</div>
+          <div class="tool-type">Team Collaboration</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#0078D4; color:white;">MS</div>
+          <div class="tool-name">Microsoft Teams</div>
+          <div class="tool-type">Remote Collaboration</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#EA4335; color:white;">GM</div>
+          <div class="tool-name">Gmail / Outlook</div>
+          <div class="tool-type">Email Management</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#0077B5; color:white;">in</div>
+          <div class="tool-name">LinkedIn</div>
+          <div class="tool-type">Client Outreach</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#FF7A59; color:white;">HS</div>
+          <div class="tool-name">HubSpot CRM</div>
+          <div class="tool-type">Client & Pipeline CRM</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#172B4D; color:white;">JR</div>
+          <div class="tool-name">Jira</div>
+          <div class="tool-type">Project Management</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#000000; color:white;">NT</div>
+          <div class="tool-name">Notion</div>
+          <div class="tool-type">Docs & Workflows</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#0052CC; color:white;">AT</div>
+          <div class="tool-name">Airtable</div>
+          <div class="tool-type">Database CRM</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PAYMENTS & BANKING -->
+    <div class="tools-section fade-up">
+      <div class="tools-section-title">Payments, Payroll & Banking</div>
+      <div class="tools-grid">
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#6772E5; color:white;">STR</div>
+          <div class="tool-name">Stripe</div>
+          <div class="tool-type">Payment Processing</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#003087; color:white;">PP</div>
+          <div class="tool-name">PayPal</div>
+          <div class="tool-type">Online Payments</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#00A86B; color:white;">PNR</div>
+          <div class="tool-name">Payoneer</div>
+          <div class="tool-type">International Payments</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#37B37F; color:white;">WIS</div>
+          <div class="tool-name">Wise</div>
+          <div class="tool-type">Cross-border Transfers</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#00B04F; color:white;">MPE</div>
+          <div class="tool-name">M-Pesa</div>
+          <div class="tool-type">Mobile Payments (Kenya)</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#E91B23; color:white;">GUS</div>
+          <div class="tool-name">Gusto</div>
+          <div class="tool-type">Payroll Management</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#00457C; color:white;">PLI</div>
+          <div class="tool-name">Plaid</div>
+          <div class="tool-type">Bank Feed Integration</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- AI & PRODUCTIVITY -->
+    <div class="tools-section fade-up" style="margin-bottom:0;">
+      <div class="tools-section-title">AI, Automation & Productivity</div>
+      <div class="tools-grid">
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#10A37F; color:white;">AI</div>
+          <div class="tool-name">ChatGPT / Claude</div>
+          <div class="tool-type">AI-Assisted Workflows</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#FF4F00; color:white;">ZP</div>
+          <div class="tool-name">Zapier</div>
+          <div class="tool-type">Workflow Automation</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#764ABC; color:white;">LM</div>
+          <div class="tool-name">Loom</div>
+          <div class="tool-type">Video Reports & Updates</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#FF5A1F; color:white;">1PW</div>
+          <div class="tool-name">LastPass / 1Password</div>
+          <div class="tool-type">Secure Credential Mgmt</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#0061FF; color:white;">DBX</div>
+          <div class="tool-name">Dropbox / Google Drive</div>
+          <div class="tool-type">File Management</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#1B6B5A; color:white;">ZM</div>
+          <div class="tool-name">Zoom / Google Meet</div>
+          <div class="tool-type">Client Video Calls</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#F24E1E; color:white;">FG</div>
+          <div class="tool-name">Figma / Canva</div>
+          <div class="tool-type">Report Design</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-logo" style="background:#E44332; color:white;">TD</div>
+          <div class="tool-name">Todoist / Asana</div>
+          <div class="tool-type">Task Management</div>
+          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Proficiency Legend -->
+    <div class="fade-up" style="display:flex; align-items:center; gap:24px; margin-top:36px; flex-wrap:wrap;">
+      <span style="font-size:12px; color:var(--ink-soft); font-weight:500;">Proficiency:</span>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <div style="width:32px; height:3px; background:var(--teal); border-radius:2px;"></div>
+        <span style="font-size:12px; color:var(--ink-soft);">Expert / Certified</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <div style="width:24px; height:3px; background:var(--teal); border-radius:2px;"></div>
+        <span style="font-size:12px; color:var(--ink-soft);">Proficient</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <div style="width:16px; height:3px; background:var(--teal); border-radius:2px;"></div>
+        <span style="font-size:12px; color:var(--ink-soft);">Familiar</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TARGET CLIENTS -->
+<section id="clients-section" style="background: white; max-width:100%; padding: 96px 0; border-top: 1px solid var(--rule);">
+  <div style="max-width:1100px; margin:0 auto; padding:0 40px;">
+
+    <div class="section-label fade-up">
+      <h2>Who I Work With</h2>
+      <span>Ideal Clients</span>
+    </div>
+
+    <style>
+      .client-grid {
+        display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+        margin-bottom: 48px;
+      }
+      .client-card {
+        padding: 32px 28px; border: 1px solid var(--rule);
+        background: white; transition: all 0.25s;
+        position: relative; overflow: hidden;
+      }
+      .client-card::before {
+        content: ''; position: absolute; top: 0; left: 0;
+        width: 3px; height: 100%; background: var(--teal);
+        transform: scaleY(0); transition: transform 0.3s;
+        transform-origin: bottom;
+      }
+      .client-card:hover::before { transform: scaleY(1); }
+      .client-card:hover { box-shadow: 0 8px 32px rgba(27,107,90,0.08); }
+      .client-icon {
+        width: 48px; height: 48px; background: var(--teal-light);
+        border-radius: 4px; display: flex; align-items: center;
+        justify-content: center; font-size: 22px; margin-bottom: 16px;
+      }
+      .client-title { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+      .client-desc { font-size: 13.5px; color: var(--ink-soft); line-height: 1.75; font-weight: 300; margin-bottom: 14px; }
+      .client-needs { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+      .client-needs li { font-size: 13px; color: var(--ink-soft); padding-left: 16px; position: relative; }
+      .client-needs li::before { content: "✦"; position: absolute; left: 0; color: var(--teal); font-size: 9px; top: 3px; }
+      .why-me-grid {
+        display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
+        margin-top: 48px;
+      }
+      .why-card {
+        background: var(--teal); padding: 28px 24px; text-align: center;
+      }
+      .why-card:nth-child(even) { background: var(--teal-mid); }
+      .why-num {
+        font-family: 'DM Serif Display', serif;
+        font-size: 36px; color: rgba(255,255,255,0.25);
+        line-height: 1; margin-bottom: 8px;
+      }
+      .why-title { font-size: 14px; font-weight: 600; color: white; margin-bottom: 6px; }
+      .why-desc { font-size: 12px; color: rgba(255,255,255,0.7); line-height: 1.6; }
+      @media (max-width: 900px) {
+        .client-grid { grid-template-columns: 1fr 1fr; }
+        .why-me-grid { grid-template-columns: 1fr 1fr; }
+      }
+      @media (max-width: 600px) {
+        .client-grid { grid-template-columns: 1fr; }
+        .why-me-grid { grid-template-columns: 1fr 1fr; }
+      }
+    </style>
+
+    <div class="client-grid fade-up">
+
+      <div class="client-card">
+        <div class="client-icon">🏛️</div>
+        <div class="client-title">Nonprofits & NGOs</div>
+        <div class="client-desc">Mission-driven organizations that need clean, donor-ready books and grant-compliant financial reporting — in the US, UK, Canada, Australia, or Kenya.</div>
+        <ul class="client-needs">
+          <li>Fund & grant expenditure tracking</li>
+          <li>Donor-restricted vs. unrestricted reporting</li>
+          <li>FASB ASC 958 / UK Charities SORP compliance</li>
+          <li>IRS Form 990 reconciliation</li>
+          <li>Board-level financial reporting</li>
+        </ul>
+      </div>
+
+      <div class="client-card">
+        <div class="client-icon">🏪</div>
+        <div class="client-title">Small Businesses</div>
+        <div class="client-desc">Founders and business owners who want their books handled by a professional so they can focus on running the business, not chasing receipts.</div>
+        <ul class="client-needs">
+          <li>Monthly bookkeeping & reconciliation</li>
+          <li>Accounts payable & receivable</li>
+          <li>Cash flow monitoring</li>
+          <li>QuickBooks or Xero setup & cleanup</li>
+          <li>Tax-ready financial statements</li>
+        </ul>
+      </div>
+
+      <div class="client-card">
+        <div class="client-icon">🛒</div>
+        <div class="client-title">E-Commerce Stores</div>
+        <div class="client-desc">Online sellers who need someone to manage the financial side — reconciling platform payouts, tracking COGS, and producing clean monthly reports.</div>
+        <ul class="client-needs">
+          <li>Shopify / Amazon / Etsy payout reconciliation</li>
+          <li>COGS & inventory tracking</li>
+          <li>Sales tax awareness</li>
+          <li>Platform fee categorization</li>
+          <li>P&L by product/channel</li>
+        </ul>
+      </div>
+
+      <div class="client-card">
+        <div class="client-icon">⛪</div>
+        <div class="client-title">Churches & Faith Organizations</div>
+        <div class="client-desc">Religious organizations that need transparent, tithe-accurate financial records and fund-specific reporting for their congregations and leadership.</div>
+        <ul class="client-needs">
+          <li>Offering & tithe income tracking</li>
+          <li>Fund-specific expense reporting</li>
+          <li>Payroll for pastoral staff</li>
+          <li>Annual giving statements</li>
+          <li>Budget vs. actual reporting</li>
+        </ul>
+      </div>
+
+      <div class="client-card">
+        <div class="client-icon">🚀</div>
+        <div class="client-title">Startups & Freelancers</div>
+        <div class="client-desc">Early-stage businesses and independent professionals who need a bookkeeper without the overhead of a full-time hire.</div>
+        <ul class="client-needs">
+          <li>Clean books from day one</li>
+          <li>Invoice management & follow-up</li>
+          <li>Expense categorization</li>
+          <li>Monthly financial snapshots</li>
+          <li>Investor-ready reporting</li>
+        </ul>
+      </div>
+
+      <div class="client-card">
+        <div class="client-icon">🌍</div>
+        <div class="client-title">International & Remote Teams</div>
+        <div class="client-desc">Organizations in the US, UK, Canada, and Australia who need a reliable remote bookkeeper available across time zones without the cost of a local hire.</div>
+        <ul class="client-needs">
+          <li>Fully async — no fixed office hours required</li>
+          <li>USD, GBP, AUD, CAD, KES proficient</li>
+          <li>Multi-currency awareness</li>
+          <li>Cloud-based workflows only</li>
+          <li>Weekly or monthly check-in cadence</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Why choose me -->
+    <div class="fade-up">
+      <div class="tools-section-title" style="color:var(--teal); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; display:flex; align-items:center; gap:12px; margin-bottom:0;">
+        Why Clients Choose Me
+        <span style="flex:1; height:1px; background:var(--rule); display:block;"></span>
+      </div>
+    </div>
+    <div class="why-me-grid fade-up">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <div class="why-title">Nonprofit Specialist</div>
+        <div class="why-desc">Two full case studies in QBO and Xero — including FASB ASC 958 and UK Charities SORP compliance. Not just familiar — practiced.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <div class="why-title">Certified & Qualified</div>
+        <div class="why-desc">QuickBooks Online Certified, BCom Finance, Advanced Excel — every credential is real, verified, and directly relevant to your books.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <div class="why-title">Remote-First</div>
+        <div class="why-desc">Built for async work — reliable communication, cloud-based tools, and deadline-driven delivery across any time zone.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <div class="why-title">AI-Powered Efficiency</div>
+        <div class="why-desc">AI-assisted workflows mean faster turnaround, fewer errors, and better output — without cutting corners on accuracy.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <!-- EDUCATION -->
 <section id="education">
@@ -1370,6 +1902,111 @@
           <span class="project-tool-new">AI Training</span>
           <span class="project-tool-new">Quality Assurance</span>
           <span class="project-tool-new">Remote Work</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Long Island Youth Mentoring -->
+    <div class="project-card-new" style="grid-column: 1 / -1;">
+      <style>
+        .liym-inner { display: grid; grid-template-columns: 1fr 1fr; }
+        .liym-images { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+        .liym-images .report-thumb { aspect-ratio: 16/9; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+        .liym-images .report-thumb:nth-child(2) { border-right: none; }
+        .liym-images .report-thumb:nth-child(3) { border-bottom: none; }
+        .liym-images .report-thumb:nth-child(4) { border-right: none; border-bottom: none; }
+        .liym-body { padding: 32px 36px; display: flex; flex-direction: column; justify-content: space-between; border-left: 1px solid var(--rule); }
+        .liym-kpi-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 20px 0; }
+        .liym-kpi { background: var(--teal-pale); border: 1px solid var(--teal-light); border-radius: 4px; padding: 14px 12px; text-align: center; }
+        .liym-kpi-num { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--teal); line-height: 1; margin-bottom: 4px; }
+        .liym-kpi-label { font-size: 11px; color: var(--ink-soft); line-height: 1.4; }
+        .liym-critique { background: #FFF8E6; border: 1px solid #F0D080; border-radius: 4px; padding: 12px 14px; margin-top: 16px; }
+        .liym-critique-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #B8860B; margin-bottom: 5px; }
+        .liym-critique-text { font-size: 12px; color: #6B5000; line-height: 1.65; }
+        @media (max-width: 900px) {
+          .liym-inner { grid-template-columns: 1fr; }
+          .liym-body { border-left: none; border-top: 1px solid var(--rule); }
+        }
+      </style>
+      <div class="project-body" style="padding: 0;">
+        <!-- Header strip -->
+        <div style="padding: 20px 28px 18px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <div class="project-cat">Financial Analysis · Nonprofit · Data Visualization</div>
+            <div class="project-title-new" style="margin-bottom: 0;">Nonprofit Financial Health Analysis — Long Island Youth Mentoring Inc.</div>
+          </div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="project-tool-new">IRS Form 990</span>
+            <span class="project-tool-new">Google Sheets</span>
+            <span class="project-tool-new">Ratio Analysis</span>
+            <span class="project-tool-new">Data Visualization</span>
+            <span class="project-tool-new">FASB ASC 958</span>
+          </div>
+        </div>
+        <!-- Main body -->
+        <div class="liym-inner">
+          <!-- Left: 4 screenshots in 2x2 grid -->
+          <div class="liym-images">
+            <div class="report-thumb">
+              <img src="LIYM_Dashboard_Summary.png" alt="Financial Health Snapshot Dashboard" onerror="this.parentElement.innerHTML='<div style=\'background:#E8F5F1;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#777;\'>Dashboard Summary</div>'"/>
+              <div class="report-overlay"><div class="report-name">Summary Dashboard</div></div>
+            </div>
+            <div class="report-thumb">
+              <img src="LIYM_Revenue_Chart.png" alt="5-Year Revenue Trend Chart" onerror="this.parentElement.innerHTML='<div style=\'background:#E8F5F1;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#777;\'>Revenue Chart</div>'"/>
+              <div class="report-overlay"><div class="report-name">5-Year Revenue Trend</div></div>
+            </div>
+            <div class="report-thumb">
+              <img src="LIYM_Ratio_Analysis.png" alt="Ratios and Analysis Tab" onerror="this.parentElement.innerHTML='<div style=\'background:#E8F5F1;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#777;\'>Ratio Analysis</div>'"/>
+              <div class="report-overlay"><div class="report-name">Ratios & Analysis</div></div>
+            </div>
+            <div class="report-thumb">
+              <img src="LIYM_Raw_Data.png" alt="Raw IRS Form 990 Data" onerror="this.parentElement.innerHTML='<div style=\'background:#E8F5F1;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#777;\'>Raw Data</div>'"/>
+              <div class="report-overlay"><div class="report-name">IRS Form 990 Raw Data</div></div>
+            </div>
+          </div>
+          <!-- Right: description + KPIs + critique -->
+          <div class="liym-body">
+            <div>
+              <div class="feat-skills-title" style="margin-bottom:8px;">About This Project</div>
+              <div style="font-size:13.5px; color:var(--ink-soft); line-height:1.8; font-weight:300;">
+                A 5-year financial health analysis for a real New York nonprofit, built entirely from public <strong>IRS Form 990 filings</strong> sourced via ProPublica's Nonprofit Explorer. Structured across three purpose-built tabs — Raw Data, Ratios & Analysis, and a board-ready Summary Dashboard — this project demonstrates the ability to take raw regulatory filings and transform them into the kind of analysis nonprofit boards actually use to answer: <em>"Are we financially sustainable?"</em>
+              </div>
+
+              <!-- KPI cards -->
+              <div class="liym-kpi-grid">
+                <div class="liym-kpi">
+                  <div class="liym-kpi-num">78.3%</div>
+                  <div class="liym-kpi-label">Revenue Growth 2024</div>
+                </div>
+                <div class="liym-kpi">
+                  <div class="liym-kpi-num">88.3%</div>
+                  <div class="liym-kpi-label">Program Efficiency<br><span style="color:var(--teal); font-size:10px;">vs 75% benchmark</span></div>
+                </div>
+                <div class="liym-kpi">
+                  <div class="liym-kpi-num">25.3</div>
+                  <div class="liym-kpi-label">Months Operating Reserve<br><span style="color:var(--teal); font-size:10px;">target: 3–6 months</span></div>
+                </div>
+              </div>
+
+              <!-- CPA critique callout -->
+              <div class="liym-critique">
+                <div class="liym-critique-label">⚠ CPA Peer Feedback — Incorporated</div>
+                <div class="liym-critique-text">A CPA reviewer noted that deeper analysis would benefit from additional metrics — including a <strong>liquidity ratio</strong> (liquid assets vs. monthly expenses) to distinguish truly liquid reserves from illiquid net assets like property, and a <strong>fundraising efficiency ratio</strong> (fundraising expense vs. revenue raised) to complete the sustainability picture. These are valid enhancements that would be added in a client-facing engagement.</div>
+              </div>
+            </div>
+
+            <div class="feat-skills-title" style="margin-top:20px; margin-bottom:8px;">Skills Demonstrated</div>
+            <div class="feat-skill-list">
+              <span class="feat-skill">IRS Form 990 Interpretation</span>
+              <span class="feat-skill">Financial Ratio Analysis</span>
+              <span class="feat-skill">Google Sheets Formulas</span>
+              <span class="feat-skill">Data Visualization</span>
+              <span class="feat-skill">Nonprofit Benchmarking</span>
+              <span class="feat-skill">FASB ASC 958</span>
+              <span class="feat-skill">Board-Level Reporting</span>
+              <span class="feat-skill">Executive Summary Writing</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
