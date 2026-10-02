@@ -3,2088 +3,367 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Caroline Musyoka — Certified Bookkeeper</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<title>Caroline Musyoka — Nonprofit & Small Business Bookkeeper</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  :root{
+    --teal:#1B6B5A; --teal-mid:#2A8A72; --teal-light:#E6F4F0; --teal-pale:#F2FAF8;
+    --ink:#111714; --ink-mid:#374840; --ink-soft:#607069; --rule:#D4E8E2;
+    --white:#FFFFFF; --off-white:#F8FDFB; --gold:#C9973A; --gold-light:#FDF3E3;
+  }
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);line-height:1.6;}
 
-  :root {
-    --teal:       #1B6B5A;
-    --teal-mid:   #2A8A72;
-    --teal-light: #E6F4F0;
-    --teal-pale:  #F2FAF8;
-    --ink:        #111714;
-    --ink-mid:    #374840;
-    --ink-soft:   #607069;
-    --rule:       #D4E8E2;
-    --white:      #FFFFFF;
-    --off-white:  #F8FDFB;
-    --gold:       #C9973A;
-  }
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px;}
+  .nav-logo{font-family:'DM Serif Display',serif;font-size:18px;color:var(--teal);}
+  .nav-links{display:flex;gap:28px;list-style:none;}
+  .nav-links a{font-size:13px;font-weight:500;color:var(--ink-soft);text-decoration:none;letter-spacing:0.03em;text-transform:uppercase;cursor:pointer;}
+  .nav-links a:hover{color:var(--teal);}
+  .nav-cta{background:var(--teal);color:white;font-size:12px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;padding:9px 18px;border-radius:2px;text-decoration:none;}
 
-  html { scroll-behavior: smooth; }
+  /* HERO — UVP led */
+  .hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;padding:120px 40px 60px;background:linear-gradient(180deg,var(--off-white) 0%, white 100%);text-align:center;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;top:-200px;right:-150px;width:500px;height:500px;border-radius:50%;background:var(--teal-light);opacity:0.5;}
+  .hero-inner{max-width:780px;margin:0 auto;position:relative;z-index:1;}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--teal-light);color:var(--teal);font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:7px 16px;border-radius:20px;margin-bottom:28px;}
+  .hero-eyebrow::before{content:'●';font-size:8px;color:var(--teal-mid);}
+  .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(32px,5vw,50px);line-height:1.2;color:var(--ink);margin-bottom:20px;}
+  .hero h1 span{color:var(--teal);}
+  .hero-uvp{font-size:18px;color:var(--ink-mid);font-weight:400;line-height:1.6;max-width:640px;margin:0 auto 36px;}
+  .hero-uvp strong{color:var(--ink);font-weight:600;}
+  .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:44px;}
+  .btn-primary{background:var(--teal);color:white;font-size:14px;font-weight:600;letter-spacing:0.03em;padding:15px 30px;border-radius:3px;text-decoration:none;border:2px solid var(--teal);transition:all 0.2s;}
+  .btn-primary:hover{background:var(--teal-mid);border-color:var(--teal-mid);}
+  .btn-outline{background:transparent;color:var(--teal);font-size:14px;font-weight:600;letter-spacing:0.03em;padding:15px 30px;border-radius:3px;text-decoration:none;border:2px solid var(--teal-light);transition:all 0.2s;}
+  .btn-outline:hover{border-color:var(--teal);}
+  .hero-proof{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;padding-top:28px;border-top:1px solid var(--rule);}
+  .proof-item{text-align:center;}
+  .proof-num{font-family:'DM Serif Display',serif;font-size:26px;color:var(--teal);line-height:1;}
+  .proof-label{font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--white);
-    color: var(--ink);
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
+  /* CAPABILITY STRIP — show don't tell, icon based */
+  .cap-strip{background:var(--ink);padding:36px 40px;}
+  .cap-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+  .cap-item{color:white;}
+  .cap-icon{font-size:26px;margin-bottom:8px;}
+  .cap-text{font-size:12.5px;color:rgba(255,255,255,0.8);line-height:1.5;}
+  .cap-text b{color:white;display:block;font-size:13.5px;margin-bottom:2px;}
 
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--rule);
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 40px; height: 60px;
-  }
-  .nav-logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 18px; color: var(--teal); letter-spacing: 0.01em;
-  }
-  .nav-links { display: flex; gap: 32px; list-style: none; }
-  .nav-links a {
-    font-size: 13px; font-weight: 500; color: var(--ink-soft);
-    text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--teal); }
+  /* SECTIONS */
+  section{padding:80px 40px;max-width:1000px;margin:0 auto;}
+  .section-head{text-align:center;margin-bottom:44px;}
+  .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;}
+  .section-head h2{font-family:'DM Serif Display',serif;font-size:30px;font-weight:400;color:var(--ink);}
 
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    display: grid; grid-template-columns: 1fr 1fr;
-    padding-top: 60px;
-  }
-  .hero-left {
-    background: var(--teal);
-    display: flex; flex-direction: column; justify-content: center;
-    padding: 80px 64px;
-    position: relative; overflow: hidden;
-  }
-  .hero-left::before {
-    content: '';
-    position: absolute; top: -120px; right: -120px;
-    width: 400px; height: 400px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.04);
-  }
-  .hero-left::after {
-    content: '';
-    position: absolute; bottom: -80px; left: -80px;
-    width: 280px; height: 280px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.05);
-  }
-  .hero-tag {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(255,255,255,0.12);
-    color: rgba(255,255,255,0.85);
-    font-size: 12px; font-weight: 500; letter-spacing: 0.08em;
-    text-transform: uppercase; padding: 6px 14px;
-    border-radius: 2px; margin-bottom: 28px;
-    width: fit-content;
-  }
-  .hero-tag::before { content: '●'; font-size: 8px; color: #7ECFB8; }
-  .hero-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(44px, 5vw, 64px);
-    color: var(--white); line-height: 1.1;
-    margin-bottom: 20px;
-  }
-  .hero-title {
-    font-size: 16px; font-weight: 300;
-    color: rgba(255,255,255,0.75);
-    line-height: 1.7; margin-bottom: 36px;
-    max-width: 380px;
-  }
-  .hero-title strong { color: white; font-weight: 500; }
-  .hero-cta {
-    display: flex; gap: 12px; flex-wrap: wrap;
-  }
-  .btn-primary {
-    background: white; color: var(--teal);
-    font-size: 13px; font-weight: 600;
-    letter-spacing: 0.04em; text-transform: uppercase;
-    padding: 13px 28px; border-radius: 2px;
-    text-decoration: none; transition: all 0.2s;
-    border: 2px solid white;
-  }
-  .btn-primary:hover { background: transparent; color: white; }
-  .btn-secondary {
-    background: transparent; color: white;
-    font-size: 13px; font-weight: 500;
-    letter-spacing: 0.04em; text-transform: uppercase;
-    padding: 13px 28px; border-radius: 2px;
-    text-decoration: none; border: 1px solid rgba(255,255,255,0.35);
-    transition: all 0.2s;
-  }
-  .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.08); }
+  /* SERVICES — accounting process order */
+  #services{background:var(--off-white);max-width:100%;}
+  #services>.section-head,#services>.process-flow{max-width:1000px;margin-left:auto;margin-right:auto;}
+  .process-flow{display:flex;flex-direction:column;gap:2px;}
+  .process-step{display:grid;grid-template-columns:52px 1fr;gap:20px;background:white;border:1px solid var(--rule);padding:22px 26px;align-items:center;}
+  .process-num{width:52px;height:52px;background:var(--teal);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:20px;}
+  .process-title{font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:3px;}
+  .process-desc{font-size:13.5px;color:var(--ink-soft);line-height:1.6;}
+  .process-step:last-child .process-num{background:var(--gold);}
 
-  .hero-right {
-    background: var(--off-white);
-    display: flex; flex-direction: column; justify-content: center;
-    padding: 80px 64px;
-  }
-  .hero-stats {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
-    margin-bottom: 48px;
-  }
-  .stat {
-    background: white; padding: 28px 24px;
-    border: 1px solid var(--rule);
-  }
-  .stat-num {
-    font-family: 'DM Serif Display', serif;
-    font-size: 40px; color: var(--teal); line-height: 1;
-    margin-bottom: 6px;
-  }
-  .stat-label {
-    font-size: 13px; color: var(--ink-soft); font-weight: 400;
-  }
-  .hero-contact { display: flex; flex-direction: column; gap: 12px; }
-  .contact-item {
-    display: flex; align-items: center; gap: 12px;
-    font-size: 14px; color: var(--ink-mid);
-  }
-  .contact-icon {
-    width: 34px; height: 34px; background: var(--teal-light);
-    border-radius: 2px; display: flex; align-items: center; justify-content: center;
-    font-size: 15px; flex-shrink: 0;
-  }
+  /* CASE STUDIES — full evidence, unified teal branding */
+  #work{max-width:100%;padding-bottom:40px;}
+  #work>.section-head{max-width:1000px;margin-left:auto;margin-right:auto;}
+  .case-study{max-width:1000px;margin:0 auto 32px;border:1px solid var(--rule);background:white;}
+  .case-top{background:var(--teal);padding:28px 32px;color:white;}
+  .case-badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;background:rgba(255,255,255,0.15);padding:4px 12px;border-radius:12px;margin-bottom:12px;}
+  .case-title{font-family:'DM Serif Display',serif;font-size:22px;margin-bottom:8px;}
+  .case-note{font-size:12.5px;color:rgba(255,255,255,0.7);font-style:italic;margin-bottom:10px;}
+  .case-uvp{font-size:14px;color:rgba(255,255,255,0.88);line-height:1.6;max-width:680px;}
+  .case-stats{display:flex;gap:28px;margin-top:18px;flex-wrap:wrap;}
+  .cs-num{font-family:'DM Serif Display',serif;font-size:22px;color:#9FE1CB;}
+  .cs-label{font-size:11px;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.04em;}
+  .case-evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);}
+  .evidence-img{background:white;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;cursor:pointer;}
+  .evidence-img img{width:100%;height:100%;object-fit:contain;background:white;}
+  .evidence-label{position:absolute;bottom:0;left:0;right:0;background:rgba(27,107,90,0.92);color:white;font-size:10.5px;font-weight:600;text-align:center;padding:6px 4px;opacity:0;transition:opacity 0.2s;}
+  .evidence-img:hover .evidence-label{opacity:1;}
+  .case-footer{padding:16px 32px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--rule);}
+  .case-footer span{font-size:12px;color:var(--ink-soft);font-weight:500;}
+  .doc-link{font-size:12px;font-weight:600;color:var(--teal);text-decoration:none;border-bottom:1px solid var(--teal-light);padding-bottom:1px;}
 
-  /* ── SECTIONS ── */
-  section { padding: 96px 40px; max-width: 1100px; margin: 0 auto; }
-  .section-label {
-    display: flex; align-items: center; gap: 14px;
-    margin-bottom: 48px;
-  }
-  .section-label::before {
-    content: '';
-    width: 32px; height: 2px; background: var(--teal);
-    flex-shrink: 0;
-  }
-  .section-label h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 32px; color: var(--ink); font-weight: 400;
-  }
-  .section-label span {
-    font-size: 12px; font-weight: 500; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--teal);
-    margin-left: auto;
-  }
+  /* TRUST / CONFIDENTIALITY */
+  #trust{background:var(--teal-pale);max-width:100%;}
+  #trust>*{max-width:1000px;margin-left:auto;margin-right:auto;}
+  .trust-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:var(--rule);}
+  .trust-card{background:white;padding:28px 24px;text-align:center;}
+  .trust-icon{font-size:28px;margin-bottom:12px;}
+  .trust-title{font-size:14.5px;font-weight:600;color:var(--ink);margin-bottom:8px;}
+  .trust-desc{font-size:12.5px;color:var(--ink-soft);line-height:1.6;}
 
-  /* ── ABOUT ── */
-  #about { border-top: 1px solid var(--rule); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-  .about-text p {
-    font-size: 16px; color: var(--ink-mid); line-height: 1.85;
-    margin-bottom: 20px; font-weight: 300;
-  }
-  .about-text p strong { color: var(--ink); font-weight: 500; }
-  .about-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
-  .badge {
-    font-size: 12px; font-weight: 500; letter-spacing: 0.04em;
-    padding: 6px 14px; border-radius: 2px;
-    border: 1px solid var(--rule); color: var(--ink-mid);
-    background: var(--off-white);
-  }
-  .badge.primary { background: var(--teal-light); border-color: var(--teal-mid); color: var(--teal); }
-  .about-callout {
-    background: var(--teal); color: white;
-    padding: 40px 36px; border-radius: 2px;
-    position: sticky; top: 80px;
-  }
-  .callout-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 24px; margin-bottom: 16px; line-height: 1.3;
-  }
-  .callout-body { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.8); margin-bottom: 24px; }
-  .callout-link {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 13px; font-weight: 600; color: white;
-    text-decoration: none; letter-spacing: 0.04em;
-    text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.4);
-    padding-bottom: 2px; transition: border-color 0.2s;
-  }
-  .callout-link:hover { border-color: white; }
+  /* TESTIMONIALS */
+  #testimonials{background:white;max-width:100%;}
+  #testimonials>*{max-width:1000px;margin-left:auto;margin-right:auto;}
+  .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--rule);}
+  .testi-card{background:white;padding:30px 28px;display:flex;flex-direction:column;gap:16px;}
+  .testi-quote{font-size:14px;color:var(--ink-mid);line-height:1.75;font-style:italic;}
+  .testi-quote::before{content:'"';color:var(--teal);font-family:'DM Serif Display',serif;font-size:28px;line-height:0;vertical-align:-10px;margin-right:2px;}
+  .testi-who{display:flex;align-items:center;gap:12px;margin-top:auto;}
+  .testi-avatar{width:40px;height:40px;border-radius:50%;background:var(--teal);color:white;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;flex-shrink:0;}
+  .testi-avatar.gold{background:var(--gold);}
+  .testi-name{font-size:13.5px;font-weight:600;color:var(--ink);}
+  .testi-role{font-size:12px;color:var(--ink-soft);}
 
-  /* ── SERVICES ── */
-  #services { background: var(--off-white); max-width: 100%; padding: 96px 0; }
-  #services > * { max-width: 1100px; margin-left: auto; margin-right: auto; padding-left: 40px; padding-right: 40px; }
-  .services-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
-    max-width: 1100px; margin: 0 auto; padding: 0 40px;
-  }
-  .service-card {
-    background: white; padding: 36px 32px;
-    border: 1px solid var(--rule);
-    transition: all 0.25s; cursor: default;
-    position: relative; overflow: hidden;
-  }
-  .service-card::after {
-    content: '';
-    position: absolute; bottom: 0; left: 0; right: 0;
-    height: 2px; background: var(--teal);
-    transform: scaleX(0); transform-origin: left;
-    transition: transform 0.3s;
-  }
-  .service-card:hover::after { transform: scaleX(1); }
-  .service-card:hover { box-shadow: 0 8px 32px rgba(27,107,90,0.1); }
-  .service-icon {
-    width: 44px; height: 44px; background: var(--teal-light);
-    border-radius: 2px; display: flex; align-items: center; justify-content: center;
-    font-size: 20px; margin-bottom: 20px;
-  }
-  .service-card h3 {
-    font-size: 16px; font-weight: 600; color: var(--ink);
-    margin-bottom: 10px; line-height: 1.3;
-  }
-  .service-card p {
-    font-size: 14px; color: var(--ink-soft); line-height: 1.75; font-weight: 300;
-  }
+  /* CONTACT */
+  #contact{text-align:center;padding-bottom:100px;}
+  .contact-title{font-family:'DM Serif Display',serif;font-size:30px;margin-bottom:14px;}
+  .contact-sub{font-size:15px;color:var(--ink-soft);max-width:520px;margin:0 auto 32px;line-height:1.7;}
+  .contact-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+  .contact-pill{display:flex;align-items:center;gap:10px;background:var(--off-white);border:1px solid var(--rule);padding:12px 20px;border-radius:30px;text-decoration:none;color:var(--ink);font-size:13.5px;font-weight:500;}
+  .contact-pill:hover{border-color:var(--teal);}
 
-  /* ── EXPERIENCE ── */
-  #experience { border-top: 1px solid var(--rule); }
-  .exp-timeline { position: relative; }
-  .exp-timeline::before {
-    content: ''; position: absolute; left: 0; top: 8px; bottom: 0;
-    width: 1px; background: var(--rule);
-  }
-  .exp-item {
-    display: grid; grid-template-columns: 200px 1fr;
-    gap: 40px; padding: 0 0 52px 0;
-    position: relative;
-  }
-  .exp-item::before {
-    content: ''; position: absolute; left: -5px; top: 8px;
-    width: 11px; height: 11px; border-radius: 50%;
-    background: var(--teal); border: 2px solid white;
-    box-shadow: 0 0 0 1px var(--teal);
-    z-index: 1;
-  }
-  .exp-left { padding-left: 24px; }
-  .exp-dates {
-    font-size: 12px; font-weight: 500; color: var(--teal);
-    letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 4px;
-  }
-  .exp-company { font-size: 13px; color: var(--ink-soft); font-weight: 400; }
-  .exp-right {}
-  .exp-role { font-size: 18px; font-weight: 600; color: var(--ink); margin-bottom: 12px; }
-  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-  .exp-bullets li {
-    font-size: 14px; color: var(--ink-mid); line-height: 1.7;
-    font-weight: 300; padding-left: 18px; position: relative;
-  }
-  .exp-bullets li::before {
-    content: '▸'; position: absolute; left: 0;
-    color: var(--teal); font-size: 11px; top: 2px;
-  }
-  .exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
-  .exp-tag {
-    font-size: 11px; font-weight: 500; letter-spacing: 0.04em;
-    padding: 4px 10px; border-radius: 2px;
-    background: var(--teal-pale); color: var(--teal);
-    border: 1px solid var(--teal-light);
-  }
+  footer{background:var(--ink);padding:26px 40px;text-align:center;}
+  footer p{color:rgba(255,255,255,0.4);font-size:12.5px;}
 
-  /* ── SKILLS ── */
-  #skills { background: var(--ink); max-width: 100%; padding: 96px 0; }
-  #skills .section-label h2 { color: white; }
-  #skills .section-label::before { background: #7ECFB8; }
-  #skills .section-label span { color: #7ECFB8; }
-  #skills > .section-label { max-width: 1100px; margin: 0 auto 48px; padding: 0 40px; }
-  .skills-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
-    max-width: 1100px; margin: 0 auto; padding: 0 40px;
+  @media(max-width:800px){
+    .cap-grid,.trust-grid,.case-evidence{grid-template-columns:1fr 1fr;}
+    .nav-links{display:none;}
+    section{padding:56px 24px;}
+    .hero{padding:110px 24px 50px;}
   }
-  .skill-group { background: #1A2420; padding: 32px 28px; }
-  .skill-group-title {
-    font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-    text-transform: uppercase; color: #7ECFB8; margin-bottom: 20px;
-  }
-  .skill-list { display: flex; flex-direction: column; gap: 10px; }
-  .skill-item { display: flex; align-items: center; gap: 10px; }
-  .skill-dot { width: 6px; height: 6px; background: var(--teal-mid); border-radius: 50%; flex-shrink: 0; }
-  .skill-name { font-size: 14px; color: rgba(255,255,255,0.75); font-weight: 300; }
-
-  /* ── EDUCATION ── */
-  #education { border-top: 1px solid var(--rule); }
-  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  .edu-card {
-    border: 1px solid var(--rule); padding: 32px 28px;
-    position: relative; background: white;
-    transition: box-shadow 0.2s;
-  }
-  .edu-card:hover { box-shadow: 0 4px 24px rgba(27,107,90,0.08); }
-  .edu-card-type {
-    font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--teal);
-    margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
-  }
-  .edu-card-type::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
-  .edu-degree { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
-  .edu-school { font-size: 14px; color: var(--ink-soft); margin-bottom: 4px; font-weight: 300; }
-  .edu-year {
-    font-size: 12px; font-weight: 500; color: var(--teal);
-    letter-spacing: 0.04em; margin-top: 12px;
-  }
-  .edu-desc { font-size: 13px; color: var(--ink-soft); line-height: 1.7; margin-top: 10px; font-weight: 300; }
-
-  /* ── PROJECTS ── */
-  #projects { background: var(--off-white); max-width: 100%; padding: 96px 0; }
-  #projects .section-label { max-width: 1100px; margin: 0 auto 48px; padding: 0 40px; }
-  .projects-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
-    max-width: 1100px; margin: 0 auto; padding: 0 40px;
-  }
-  .project-card {
-    background: white; padding: 40px 36px;
-    border: 1px solid var(--rule);
-    transition: all 0.25s;
-  }
-  .project-card:hover { box-shadow: 0 8px 32px rgba(27,107,90,0.1); }
-  .project-num {
-    font-family: 'DM Serif Display', serif;
-    font-size: 48px; color: var(--teal-light); line-height: 1;
-    margin-bottom: 12px;
-  }
-  .project-title { font-size: 18px; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
-  .project-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.75; font-weight: 300; }
-  .project-tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
-  .project-tool {
-    font-size: 11px; font-weight: 500; padding: 4px 10px;
-    border-radius: 2px; background: var(--teal-pale);
-    color: var(--teal); border: 1px solid var(--teal-light);
-  }
-
-  /* ── CONTACT ── */
-  #contact { border-top: 1px solid var(--rule); }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-  .contact-intro h3 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 36px; color: var(--ink); margin-bottom: 16px; line-height: 1.2;
-  }
-  .contact-intro p { font-size: 15px; color: var(--ink-soft); line-height: 1.8; font-weight: 300; }
-  .contact-details { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
-  .contact-row {
-    display: flex; align-items: center; gap: 16px;
-    padding: 18px 20px; border: 1px solid var(--rule);
-    background: var(--off-white);
-  }
-  .contact-icon-box {
-    width: 40px; height: 40px; background: var(--teal);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 17px; flex-shrink: 0; border-radius: 2px;
-  }
-  .contact-detail-label { font-size: 11px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
-  .contact-detail-value { font-size: 14px; color: var(--ink); font-weight: 500; }
-  .availability-box {
-    background: var(--teal); padding: 40px 36px; border-radius: 2px;
-  }
-  .avail-title {
-    font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
-    text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 12px;
-  }
-  .avail-status {
-    display: flex; align-items: center; gap: 10px;
-    font-size: 20px; font-weight: 600; color: white; margin-bottom: 20px;
-  }
-  .avail-dot {
-    width: 10px; height: 10px; background: #7ECFB8;
-    border-radius: 50%; animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(1.3); }
-  }
-  .avail-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .avail-list li {
-    font-size: 14px; color: rgba(255,255,255,0.8);
-    padding-left: 18px; position: relative; font-weight: 300;
-  }
-  .avail-list li::before {
-    content: '✓'; position: absolute; left: 0;
-    color: #7ECFB8; font-weight: 600;
-  }
-  .portfolio-link {
-    display: inline-flex; align-items: center; gap: 10px;
-    margin-top: 28px; background: white;
-    color: var(--teal); font-size: 13px; font-weight: 600;
-    letter-spacing: 0.04em; text-transform: uppercase;
-    padding: 12px 24px; border-radius: 2px; text-decoration: none;
-    transition: all 0.2s;
-  }
-  .portfolio-link:hover { background: var(--teal-light); }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--ink); padding: 32px 40px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .footer-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: 18px; color: white;
-  }
-  .footer-copy { font-size: 13px; color: rgba(255,255,255,0.35); }
-
-  /* ── ANIMATIONS ── */
-  .fade-up {
-    opacity: 0; transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; }
-    .hero-left { padding: 60px 32px; min-height: 60vh; }
-    .hero-right { padding: 48px 32px; }
-    .about-grid, .contact-grid, .edu-grid, .projects-grid { grid-template-columns: 1fr; gap: 32px; }
-    .services-grid, .skills-grid { grid-template-columns: 1fr 1fr; }
-    nav { padding: 0 24px; }
-    .nav-links { gap: 20px; }
-    .exp-item { grid-template-columns: 1fr; gap: 8px; }
-    .exp-timeline::before { display: none; }
-    .exp-item::before { display: none; }
-    .exp-left { padding-left: 0; }
-    section { padding: 64px 24px; }
-  }
-  @media (max-width: 600px) {
-    .services-grid, .skills-grid { grid-template-columns: 1fr; }
-    .hero-stats { grid-template-columns: 1fr 1fr; }
-    .nav-links { display: none; }
+  @media(max-width:560px){
+    .cap-grid,.trust-grid,.case-evidence{grid-template-columns:1fr;}
+    .process-step{grid-template-columns:40px 1fr;padding:18px 18px;}
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">Caroline Musyoka</div>
   <ul class="nav-links">
-    <li><a href="#about" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});return false;">About</a></li>
-    <li><a href="#services" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});return false;">Services</a></li>
-    <li><a href="#projects" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'});return false;">Projects</a></li>
-    <li><a href="#tools" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'});return false;">Tools</a></li>
-    <li><a href="#clients-section" onclick="document.getElementById('clients-section').scrollIntoView({behavior:'smooth'});return false;">Clients</a></li>
-    <li><a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Contact</a></li>
+    <li><a onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Services</a></li>
+    <li><a onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">Case Studies</a></li>
+    <li><a onclick="document.getElementById('trust').scrollIntoView({behavior:'smooth'})">Why Trust Me</a></li>
   </ul>
+  <a href="mailto:musyokacarolinenduku@gmail.com?subject=Bookkeeping%20Inquiry" class="nav-cta">Hire Me</a>
 </nav>
 
-<!-- HERO -->
+<!-- HERO — leads with UVP, not biography -->
 <div class="hero">
-  <div class="hero-left">
-    <div style="margin-bottom:20px;">
-        <img src="Carol_LinkedIn_Headshot_Final.jpg" 
-             alt="Caroline Musyoka — Certified Bookkeeper" 
-             onerror="this.style.display='none'"
-             style="width:90px; height:90px; border-radius:50%; object-fit:cover; border:3px solid rgba(255,255,255,0.3); display:block;"/>
-      </div>
-      <div class="hero-tag">Available for Remote Work</div>
-    <h1 class="hero-name">Caroline<br>Musyoka</h1>
-    <p class="hero-title">
-      <strong>QuickBooks Certified Bookkeeper</strong> with a BCom in Finance. Delivering clean books, accurate reports, and AI-powered workflows for businesses and organizations worldwide.
-    </p>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Available for New Clients</div>
+    <h1>The bookkeeper who shows you <span>proof before you hire</span>, not promises after.</h1>
+    <p class="hero-uvp">I'm Caroline — a <strong>QuickBooks & Xero certified bookkeeper</strong> specializing in nonprofits and small businesses. Every case study below is a fully worked, publicly verifiable set of books — so you can judge the work itself before we ever talk.</p>
     <div class="hero-cta">
-      <a href="#contact" class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Hire Me</a>
-      <a href="#services" class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});return false;">View Services</a>
+      <a href="mailto:musyokacarolinenduku@gmail.com?subject=Bookkeeping%20Inquiry" class="btn-primary">Hire Me →</a>
+      <a onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})" class="btn-outline" style="cursor:pointer;">See the Evidence</a>
     </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">4+</div>
-        <div class="stat-label">Years of Experience</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">QBO</div>
-        <div class="stat-label">QuickBooks Certified</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">2</div>
-        <div class="stat-label">Platform Case Studies</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Remote Ready</div>
-      </div>
-    </div>
-    <div class="hero-contact">
-      <div class="contact-item">
-        <div class="contact-icon">✉</div>
-        <a href="mailto:musyokacarolinenduku@gmail.com" style="color:inherit; text-decoration:none;">musyokacarolinenduku@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">☎</div>
-        <a href="tel:+254768546326" style="color:inherit; text-decoration:none;">+254 768 546 326</a>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">⌖</div>
-        Nairobi, Kenya · Remote
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">in</div>
-        <a href="https://linkedin.com/in/caroline-musyoka" target="_blank" style="color:inherit;">linkedin.com/in/caroline-musyoka</a>
-      </div>
+    <div class="hero-proof">
+      <div class="proof-item"><div class="proof-num">2</div><div class="proof-label">Platforms Certified</div></div>
+      <div class="proof-item"><div class="proof-num">3</div><div class="proof-label">Full Case Studies</div></div>
+      <div class="proof-item"><div class="proof-num">4+</div><div class="proof-label">Years Experience</div></div>
+      <div class="proof-item"><div class="proof-num">50+</div><div class="proof-label">Clients — US, UK & UAE</div></div>
     </div>
   </div>
 </div>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-label">
-    <h2>About Me</h2>
-    <span>Who I Am</span>
-  </div>
-  <div class="about-grid fade-up">
-    <div class="about-text">
-      <p>I'm a <strong>QuickBooks Certified Bookkeeper</strong> with a BCom in Finance from Masinde Muliro University of Science and Technology. I bring together formal finance education, 4+ years of hands-on bookkeeping experience across <strong>QuickBooks Online and Xero</strong>, and modern AI-assisted workflows to deliver financial services that are accurate, timely, and genuinely useful.</p>
-      <p>Over the past few years I've worked across bookkeeping, financial transcription editing, and AI data annotation — building a profile that combines <strong>deep finance expertise with practical tech fluency</strong>. I work fully remotely and thrive in async, deadline-driven environments.</p>
-      <p>Whether you need clean monthly books, a QuickBooks setup, or a custom Excel dashboard, I bring the same standard: <strong>precision, reliability, and clear communication</strong>.</p>
-      <div class="about-badges">
-        <span class="badge primary">QuickBooks Certified</span>
-        <span class="badge primary">BCom Finance</span>
-        <span class="badge">Remote-Ready</span>
-        <span class="badge">Advanced Excel</span>
-        <span class="badge">AI-Powered Workflows</span>
-        <span class="badge">Async Communication</span>
-      </div>
-    </div>
-    <div class="about-callout">
-      <div class="callout-title">Ready to bring order to your finances</div>
-      <p class="callout-body">I'm currently accepting new remote clients across bookkeeping, financial reporting, and finance support roles. Let's work together to keep your books clean and your numbers clear.</p>
-      <a href="https://linkedin.com/in/caroline-musyoka" class="callout-link" target="_blank">Connect on LinkedIn →</a>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<div id="services" style="background:var(--off-white); padding: 96px 0;">
-  <div style="max-width:1100px; margin:0 auto; padding:0 40px;">
-    <div class="section-label fade-up">
-      <h2>Services</h2>
-      <span>What I Offer</span>
-    </div>
-  </div>
-  <div class="services-grid fade-up">
-    <div class="service-card">
-      <div class="service-icon">📒</div>
-      <h3>Bookkeeping</h3>
-      <p>End-to-end monthly bookkeeping — transaction recording, categorization, accounts payable & receivable, and clean audit-ready records maintained in QuickBooks Online.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">📊</div>
-      <h3>Financial Reporting</h3>
-      <p>Monthly profit & loss statements, balance sheets, and budget variance reports delivered in a clear format that helps you understand exactly where your money stands.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🔄</div>
-      <h3>Bank Reconciliation</h3>
-      <p>Monthly bank and credit account reconciliation to ensure your books match your actual statements, catch errors early, and keep records accurate and audit-ready.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">⚙️</div>
-      <h3>QuickBooks Setup & Cleanup</h3>
-      <p>New to QuickBooks Online or dealing with messy books? I set up your chart of accounts, clean up past transactions, and get your QBO file organized and accurate.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">📋</div>
-      <h3>Excel Financial Dashboards</h3>
-      <p>Custom Excel templates and dashboards for budget tracking, expense reporting, and financial summaries — built with pivot tables and formulas tailored to your business.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🏛️</div>
-      <h3>Nonprofit & NGO Bookkeeping</h3>
-      <p>Specialized bookkeeping for nonprofits and NGOs — including fund accounting, grant expenditure tracking, and donor reporting to keep you compliant and transparent.</p>
-    </div>
+<!-- CAPABILITY STRIP -->
+<div class="cap-strip">
+  <div class="cap-grid">
+    <div class="cap-item"><div class="cap-icon">📊</div><div class="cap-text"><b>QuickBooks + Xero</b>Certified on both — not just one</div></div>
+    <div class="cap-item"><div class="cap-icon">🏛️</div><div class="cap-text"><b>Nonprofit Specialist</b>Fund accounting, SORP & FASB 958</div></div>
+    <div class="cap-item"><div class="cap-icon">🌍</div><div class="cap-text"><b>Fully Remote</b>US, UK, EU time zones covered</div></div>
+    <div class="cap-item"><div class="cap-icon">🔒</div><div class="cap-text"><b>Confidential by Default</b>NDA on request, secure tools only</div></div>
   </div>
 </div>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-label fade-up">
-    <h2>Experience</h2>
-    <span>Work History</span>
+<!-- SERVICES — accounting process order, reporting LAST -->
+<div id="services" style="background:var(--off-white);">
+  <div class="section-head" style="padding-top:80px;">
+    <div class="section-eyebrow">What I Do For You</div>
+    <h2>Your books, handled in order</h2>
   </div>
-  <div class="exp-timeline">
-
-    <div class="exp-item fade-up">
-      <div class="exp-left">
-        <div class="exp-dates">Jan 2023 – Dec 2025</div>
-        <div class="exp-company">Self-employed · Remote</div>
-      </div>
-      <div class="exp-right">
-        <div class="exp-role">Freelance Bookkeeper</div>
-        <ul class="exp-bullets">
-          <li>Provided remote bookkeeping services for a private company using QuickBooks Online and Microsoft Excel</li>
-          <li>Prepared income statements, balance sheets, and monthly financial reports for management review</li>
-          <li>Performed bank reconciliations and managed accounts payable and receivable processes</li>
-          <li>Maintained organized, audit-ready books and improved cash flow visibility for the client</li>
-        </ul>
-        <div class="exp-tags">
-          <span class="exp-tag">QuickBooks Online</span>
-          <span class="exp-tag">Excel</span>
-          <span class="exp-tag">Bank Reconciliation</span>
-          <span class="exp-tag">Financial Reporting</span>
-        </div>
-      </div>
+  <div class="process-flow">
+    <div class="process-step">
+      <div class="process-num">1</div>
+      <div><div class="process-title">Transaction Recording & Categorization</div><div class="process-desc">Every transaction entered and coded correctly — the foundation everything else depends on.</div></div>
     </div>
-
-    <div class="exp-item fade-up">
-      <div class="exp-left">
-        <div class="exp-dates">Jul 2025 – Apr 2026</div>
-        <div class="exp-company">Remoat Teams · Remote</div>
-      </div>
-      <div class="exp-right">
-        <div class="exp-role">Financial Transcription Editor</div>
-        <ul class="exp-bullets">
-          <li>Reviewed and edited financial transcripts for accuracy, clarity, and consistency per client style guidelines</li>
-          <li>Proofread high-volume financial content with strong attention to technical financial terminology</li>
-          <li>Delivered edited transcripts within strict turnaround times in a fully remote, async environment</li>
-        </ul>
-        <div class="exp-tags">
-          <span class="exp-tag">Proofreading</span>
-          <span class="exp-tag">Financial Documentation</span>
-          <span class="exp-tag">Attention to Detail</span>
-        </div>
-      </div>
+    <div class="process-step">
+      <div class="process-num">2</div>
+      <div><div class="process-title">Bank & Credit Reconciliation</div><div class="process-desc">Your books matched against real statements every month — no year-end surprises.</div></div>
     </div>
-
-    <div class="exp-item fade-up">
-      <div class="exp-left">
-        <div class="exp-dates">Dec 2025 – Mar 2026</div>
-        <div class="exp-company">iMerit Scholars · Remote</div>
-      </div>
-      <div class="exp-right">
-        <div class="exp-role">Data Annotation Specialist</div>
-        <ul class="exp-bullets">
-          <li>Annotated and validated datasets to support AI and machine learning model training</li>
-          <li>Maintained high accuracy across large annotation volumes with critical thinking on edge cases</li>
-          <li>Worked independently in a remote, deadline-driven environment with minimal supervision</li>
-        </ul>
-        <div class="exp-tags">
-          <span class="exp-tag">AI Data Annotation</span>
-          <span class="exp-tag">Data Labeling</span>
-          <span class="exp-tag">Quality Assurance</span>
-        </div>
-      </div>
+    <div class="process-step">
+      <div class="process-num">3</div>
+      <div><div class="process-title">Accounts Payable & Receivable</div><div class="process-desc">Bills tracked, invoices followed up — so cash flow is never a guessing game.</div></div>
     </div>
-
-    <div class="exp-item fade-up">
-      <div class="exp-left">
-        <div class="exp-dates">Jan 2022 – Dec 2022</div>
-        <div class="exp-company">KMTC · On-site</div>
-      </div>
-      <div class="exp-right">
-        <div class="exp-role">Finance & Accounts Clerk</div>
-        <ul class="exp-bullets">
-          <li>Supported the finance department with day-to-day accounting, ledger maintenance, and transaction recording</li>
-          <li>Assisted with preparation of financial summaries and internal reports for institutional use</li>
-          <li>Gained hands-on experience in institutional finance operations and financial documentation standards</li>
-        </ul>
-        <div class="exp-tags">
-          <span class="exp-tag">Bookkeeping</span>
-          <span class="exp-tag">Accounts Payable</span>
-          <span class="exp-tag">Financial Reporting</span>
-          <span class="exp-tag">Data Entry</span>
-        </div>
-      </div>
+    <div class="process-step">
+      <div class="process-num">4</div>
+      <div><div class="process-title">Month-End Close</div><div class="process-desc">A clean cut-off every month, so you're never scrambling to reconstruct a quarter.</div></div>
     </div>
-
-  </div>
-</section>
-
-<!-- SKILLS -->
-<div id="skills" style="background:var(--ink); padding: 96px 0;">
-  <div class="section-label fade-up" style="max-width:1100px; margin:0 auto 48px; padding:0 40px;">
-    <h2 style="color:white; font-family:'DM Serif Display',serif; font-weight:400; font-size:32px;">Skills</h2>
-    <span style="color:#7ECFB8; font-size:12px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; margin-left:auto;">Core Competencies</span>
-  </div>
-  <div class="skills-grid fade-up">
-    <div class="skill-group">
-      <div class="skill-group-title">Bookkeeping</div>
-      <div class="skill-list">
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">QuickBooks Online</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Bank Reconciliation</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Accounts Payable & Receivable</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Chart of Accounts</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Monthly Financial Close</span></div>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">Reporting & Analysis</div>
-      <div class="skill-list">
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Financial Statements</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Budget Tracking</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Variance Analysis</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Grant Expenditure Reports</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Cash Flow Reporting</span></div>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">Excel</div>
-      <div class="skill-list">
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Pivot Tables</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">VLOOKUP & IF Formulas</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Financial Dashboards</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Custom Templates</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Data Visualization</span></div>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">AI & Data</div>
-      <div class="skill-list">
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">AI-Assisted Workflows</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Data Annotation</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">ML Model Support</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Quality Assurance</span></div>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">Editing & Documentation</div>
-      <div class="skill-list">
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Financial Proofreading</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Transcription Editing</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Style Guide Compliance</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Technical Writing</span></div>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">Professional</div>
-      <div class="skill-list">
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Remote Work</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Async Communication</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Attention to Detail</span></div>
-        <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Time Management</span></div>
-      </div>
+    <div class="process-step">
+      <div class="process-num">5</div>
+      <div><div class="process-title">Financial Reporting & Compliance</div><div class="process-desc">Board-ready statements, donor/grant reporting, audit-ready — the output all the above work makes possible.</div></div>
     </div>
   </div>
+  <div style="height:80px;"></div>
 </div>
 
-
-<!-- TOOLS & TECHNOLOGY -->
-<section id="tools" style="background: var(--off-white); max-width:100%; padding: 96px 0;">
-  <div style="max-width:1100px; margin:0 auto; padding:0 40px;">
-
-    <div class="section-label fade-up">
-      <h2>Tools & Technology</h2>
-      <span>Tech Stack</span>
-    </div>
-
-    <style>
-      .tools-section { margin-bottom: 48px; }
-      .tools-section-title {
-        font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
-        text-transform: uppercase; color: var(--teal);
-        display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
-      }
-      .tools-section-title::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
-      .tools-grid {
-        display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px;
-      }
-      .tool-card {
-        background: white; border: 1px solid var(--rule);
-        border-radius: 4px; padding: 16px 12px;
-        display: flex; flex-direction: column; align-items: center; gap: 10px;
-        transition: all 0.2s; cursor: default;
-      }
-      .tool-card:hover { box-shadow: 0 4px 16px rgba(27,107,90,0.1); transform: translateY(-2px); border-color: var(--teal-light); }
-      .tool-logo {
-        width: 42px; height: 42px; border-radius: 8px;
-        display: flex; align-items: center; justify-content: center;
-        font-size: 11px; font-weight: 700; letter-spacing: 0.02em;
-        flex-shrink: 0;
-      }
-      .tool-name { font-size: 12px; font-weight: 500; color: var(--ink); text-align: center; line-height: 1.3; }
-      .tool-type { font-size: 10px; color: var(--ink-soft); text-align: center; }
-      .proficiency-bar { width: 100%; height: 3px; background: var(--rule); border-radius: 2px; margin-top: 4px; }
-      .proficiency-fill { height: 100%; border-radius: 2px; background: var(--teal); }
-      .prof-expert { width: 100%; }
-      .prof-proficient { width: 75%; }
-      .prof-familiar { width: 50%; }
-    </style>
-
-    <!-- ACCOUNTING & BOOKKEEPING -->
-    <div class="tools-section fade-up">
-      <div class="tools-section-title">Accounting & Bookkeeping Platforms</div>
-      <div class="tools-grid">
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#2CA01C; color:white;">QBO</div>
-          <div class="tool-name">QuickBooks Online</div>
-          <div class="tool-type">Certified ★</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#00B4D8; color:white;">XER</div>
-          <div class="tool-name">Xero</div>
-          <div class="tool-type">Hands-on Experience</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#E8501A; color:white;">FW</div>
-          <div class="tool-name">FreshBooks</div>
-          <div class="tool-type">Invoicing & Bookkeeping</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#1D3557; color:white;">WV</div>
-          <div class="tool-name">Wave Accounting</div>
-          <div class="tool-type">Free Bookkeeping</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#5C2D91; color:white;">SAP</div>
-          <div class="tool-name">SAP Business One</div>
-          <div class="tool-type">ERP / Accounting</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#FF6B35; color:white;">ZB</div>
-          <div class="tool-name">Zoho Books</div>
-          <div class="tool-type">SME Accounting</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- SPREADSHEETS & DATA -->
-    <div class="tools-section fade-up">
-      <div class="tools-section-title">Spreadsheets & Data Analysis</div>
-      <div class="tools-grid">
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#217346; color:white;">XLS</div>
-          <div class="tool-name">Microsoft Excel</div>
-          <div class="tool-type">Advanced ★</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#0F9D58; color:white;">GS</div>
-          <div class="tool-name">Google Sheets</div>
-          <div class="tool-type">Dashboards & Analysis</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#E2711D; color:white;">GD</div>
-          <div class="tool-name">Google Data Studio</div>
-          <div class="tool-type">Reporting & Charts</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#F2C811; color:#333;">PBI</div>
-          <div class="tool-name">Power BI</div>
-          <div class="tool-type">Data Visualization</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#1A7ABF; color:white;">PPT</div>
-          <div class="tool-name">PowerPoint</div>
-          <div class="tool-type">Financial Presentations</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#4285F4; color:white;">GD</div>
-          <div class="tool-name">Google Docs</div>
-          <div class="tool-type">Reports & Documentation</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- CRM & COMMUNICATION -->
-    <div class="tools-section fade-up">
-      <div class="tools-section-title">CRM, Communication & Collaboration</div>
-      <div class="tools-grid">
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#25D366; color:white;">WA</div>
-          <div class="tool-name">WhatsApp Business</div>
-          <div class="tool-type">Client Communication</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#4A154B; color:white;">SLK</div>
-          <div class="tool-name">Slack</div>
-          <div class="tool-type">Team Collaboration</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#0078D4; color:white;">MS</div>
-          <div class="tool-name">Microsoft Teams</div>
-          <div class="tool-type">Remote Collaboration</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#EA4335; color:white;">GM</div>
-          <div class="tool-name">Gmail / Outlook</div>
-          <div class="tool-type">Email Management</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#0077B5; color:white;">in</div>
-          <div class="tool-name">LinkedIn</div>
-          <div class="tool-type">Client Outreach</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#FF7A59; color:white;">HS</div>
-          <div class="tool-name">HubSpot CRM</div>
-          <div class="tool-type">Client & Pipeline CRM</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#172B4D; color:white;">JR</div>
-          <div class="tool-name">Jira</div>
-          <div class="tool-type">Project Management</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#000000; color:white;">NT</div>
-          <div class="tool-name">Notion</div>
-          <div class="tool-type">Docs & Workflows</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#0052CC; color:white;">AT</div>
-          <div class="tool-name">Airtable</div>
-          <div class="tool-type">Database CRM</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- PAYMENTS & BANKING -->
-    <div class="tools-section fade-up">
-      <div class="tools-section-title">Payments, Payroll & Banking</div>
-      <div class="tools-grid">
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#6772E5; color:white;">STR</div>
-          <div class="tool-name">Stripe</div>
-          <div class="tool-type">Payment Processing</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#003087; color:white;">PP</div>
-          <div class="tool-name">PayPal</div>
-          <div class="tool-type">Online Payments</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#00A86B; color:white;">PNR</div>
-          <div class="tool-name">Payoneer</div>
-          <div class="tool-type">International Payments</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#37B37F; color:white;">WIS</div>
-          <div class="tool-name">Wise</div>
-          <div class="tool-type">Cross-border Transfers</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#00B04F; color:white;">MPE</div>
-          <div class="tool-name">M-Pesa</div>
-          <div class="tool-type">Mobile Payments (Kenya)</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#E91B23; color:white;">GUS</div>
-          <div class="tool-name">Gusto</div>
-          <div class="tool-type">Payroll Management</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#00457C; color:white;">PLI</div>
-          <div class="tool-name">Plaid</div>
-          <div class="tool-type">Bank Feed Integration</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- AI & PRODUCTIVITY -->
-    <div class="tools-section fade-up" style="margin-bottom:0;">
-      <div class="tools-section-title">AI, Automation & Productivity</div>
-      <div class="tools-grid">
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#10A37F; color:white;">AI</div>
-          <div class="tool-name">ChatGPT / Claude</div>
-          <div class="tool-type">AI-Assisted Workflows</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#FF4F00; color:white;">ZP</div>
-          <div class="tool-name">Zapier</div>
-          <div class="tool-type">Workflow Automation</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#764ABC; color:white;">LM</div>
-          <div class="tool-name">Loom</div>
-          <div class="tool-type">Video Reports & Updates</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#FF5A1F; color:white;">1PW</div>
-          <div class="tool-name">LastPass / 1Password</div>
-          <div class="tool-type">Secure Credential Mgmt</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#0061FF; color:white;">DBX</div>
-          <div class="tool-name">Dropbox / Google Drive</div>
-          <div class="tool-type">File Management</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#1B6B5A; color:white;">ZM</div>
-          <div class="tool-name">Zoom / Google Meet</div>
-          <div class="tool-type">Client Video Calls</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-expert"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#F24E1E; color:white;">FG</div>
-          <div class="tool-name">Figma / Canva</div>
-          <div class="tool-type">Report Design</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-familiar"></div></div>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-logo" style="background:#E44332; color:white;">TD</div>
-          <div class="tool-name">Todoist / Asana</div>
-          <div class="tool-type">Task Management</div>
-          <div class="proficiency-bar"><div class="proficiency-fill prof-proficient"></div></div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Proficiency Legend -->
-    <div class="fade-up" style="display:flex; align-items:center; gap:24px; margin-top:36px; flex-wrap:wrap;">
-      <span style="font-size:12px; color:var(--ink-soft); font-weight:500;">Proficiency:</span>
-      <div style="display:flex; align-items:center; gap:6px;">
-        <div style="width:32px; height:3px; background:var(--teal); border-radius:2px;"></div>
-        <span style="font-size:12px; color:var(--ink-soft);">Expert / Certified</span>
-      </div>
-      <div style="display:flex; align-items:center; gap:6px;">
-        <div style="width:24px; height:3px; background:var(--teal); border-radius:2px;"></div>
-        <span style="font-size:12px; color:var(--ink-soft);">Proficient</span>
-      </div>
-      <div style="display:flex; align-items:center; gap:6px;">
-        <div style="width:16px; height:3px; background:var(--teal); border-radius:2px;"></div>
-        <span style="font-size:12px; color:var(--ink-soft);">Familiar</span>
-      </div>
-    </div>
-
+<!-- CASE STUDIES — full uncropped evidence -->
+<section id="work">
+  <div class="section-head">
+    <div class="section-eyebrow">Proof, Not Claims</div>
+    <h2>Judge the work yourself</h2>
   </div>
+
+  <!-- Case Study 1: QBO -->
+  <div class="case-study">
+    <div class="case-top">
+      <div class="case-badge">QuickBooks Online</div>
+      <div class="case-title">Heritage Humane Society — Full-Cycle Nonprofit Bookkeeping</div>
+      <div class="case-note">Self-directed case study — built from this organization's public IRS Form 990 filing, not a client engagement.</div>
+      <p class="case-uvp">Reconstructed 12 months of books from scratch: chart of accounts, fund tracking, vendor/donor records, and all 4 nonprofit financial statements — landing within 1.6% of the org's real filed figures.</p>
+      <div class="case-stats">
+        <div><div class="cs-num">$1.8M</div><div class="cs-label">Revenue Recorded</div></div>
+        <div><div class="cs-num">47</div><div class="cs-label">Chart of Accounts</div></div>
+        <div><div class="cs-num">1.6%</div><div class="cs-label">Variance to Filed 990</div></div>
+      </div>
+    </div>
+    <div class="case-evidence">
+      <div class="evidence-img"><img src="QBO_Statement_of_Activity.png" alt="Statement of Activity"/><div class="evidence-label">Statement of Activity</div></div>
+      <div class="evidence-img"><img src="QBO_Statement_of_Financial_Position.png" alt="Balance Sheet"/><div class="evidence-label">Financial Position</div></div>
+      <div class="evidence-img"><img src="QBO_Statement_of_Activity_by_Class.png" alt="Activity by Class"/><div class="evidence-label">Activity by Programme</div></div>
+    </div>
+    <div class="case-footer">
+      <span>Full reports:</span>
+      <a href="Statement_of_Activity.pdf" target="_blank" class="doc-link">Statement of Activity ↗</a>
+      <a href="Statement_of_Financial_Position.pdf" target="_blank" class="doc-link">Balance Sheet ↗</a>
+      <a href="Statement_of_Cash_Flows.pdf" target="_blank" class="doc-link">Cash Flows ↗</a>
+    </div>
+  </div>
+
+  <!-- Case Study 2: Xero -->
+  <div class="case-study">
+    <div class="case-top">
+      <div class="case-badge">Xero</div>
+      <div class="case-title">Narthex Sparkhill — UK Charity Bookkeeping (Charities SORP)</div>
+      <div class="case-note">Self-directed case study — built from this charity's public filed accounts, not a client engagement.</div>
+      <p class="case-uvp">Full Xero setup under UK Charities SORP standards — restricted vs. unrestricted funds, 7 programme categories, a full year of transactions — reconciled to within 0.3% of filed accounts.</p>
+      <div class="case-stats">
+        <div><div class="cs-num">£909K</div><div class="cs-label">Income Recorded</div></div>
+        <div><div class="cs-num">7</div><div class="cs-label">Programme Categories</div></div>
+        <div><div class="cs-num">0.3%</div><div class="cs-label">Variance to Filed Accounts</div></div>
+      </div>
+    </div>
+    <div class="case-evidence">
+      <div class="evidence-img"><img src="Xero_PnL.png" alt="Profit and Loss"/><div class="evidence-label">Profit & Loss</div></div>
+      <div class="evidence-img"><img src="Xero_Balance_Sheet.png" alt="Balance Sheet"/><div class="evidence-label">Balance Sheet</div></div>
+      <div class="evidence-img"><img src="Xero_PnL_by_Programme.png" alt="P&L by Programme"/><div class="evidence-label">P&L by Programme</div></div>
+    </div>
+    <div class="case-footer">
+      <span>Full reports:</span>
+      <a href="Narthex_Sparkhill_-_Profit_and_Loss.pdf" target="_blank" class="doc-link">Profit & Loss ↗</a>
+      <a href="Narthex_Sparkhill_-_Balance_Sheet.pdf" target="_blank" class="doc-link">Balance Sheet ↗</a>
+      <a href="Narthex_Sparkhill_-_Profit_and_Loss__1_.pdf" target="_blank" class="doc-link">By Programme ↗</a>
+    </div>
+  </div>
+
+  <!-- Case Study 3: Financial Analysis -->
+  <div class="case-study">
+    <div class="case-top">
+      <div class="case-badge">Financial Analysis</div>
+      <div class="case-title">Long Island Youth Mentoring — Board-Ready Financial Health Snapshot</div>
+      <div class="case-note">Self-directed case study — built from this nonprofit's public IRS Form 990 filings.</div>
+      <p class="case-uvp">Turned 5 years of raw IRS filings into the 3 numbers a board actually needs: revenue trend, program efficiency, and operating reserve — with CPA feedback incorporated into the final model.</p>
+      <div class="case-stats">
+        <div><div class="cs-num">78.3%</div><div class="cs-label">Revenue Growth 2024</div></div>
+        <div><div class="cs-num">88.3%</div><div class="cs-label">Program Efficiency</div></div>
+        <div><div class="cs-num">25.3</div><div class="cs-label">Months Reserve</div></div>
+      </div>
+    </div>
+    <div class="case-evidence">
+      <div class="evidence-img"><img src="LIYM_Dashboard_Summary.png" alt="Summary Dashboard"/><div class="evidence-label">Summary Dashboard</div></div>
+      <div class="evidence-img"><img src="LIYM_Revenue_Chart.png" alt="Revenue Trend"/><div class="evidence-label">5-Year Revenue Trend</div></div>
+      <div class="evidence-img"><img src="LIYM_Ratio_Analysis.png" alt="Ratio Analysis"/><div class="evidence-label">Ratios & Analysis</div></div>
+    </div>
+    <div class="case-footer">
+      <span style="color:var(--gold);font-weight:600;">⚠ Incorporated CPA feedback:</span>
+      <span>Added liquidity & fundraising efficiency ratios after peer review — shown in the full model.</span>
+    </div>
+  </div>
+
 </section>
 
-<!-- TARGET CLIENTS -->
-<section id="clients-section" style="background: white; max-width:100%; padding: 96px 0; border-top: 1px solid var(--rule);">
-  <div style="max-width:1100px; margin:0 auto; padding:0 40px;">
-
-    <div class="section-label fade-up">
-      <h2>Who I Work With</h2>
-      <span>Ideal Clients</span>
-    </div>
-
-    <style>
-      .client-grid {
-        display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
-        margin-bottom: 48px;
-      }
-      .client-card {
-        padding: 32px 28px; border: 1px solid var(--rule);
-        background: white; transition: all 0.25s;
-        position: relative; overflow: hidden;
-      }
-      .client-card::before {
-        content: ''; position: absolute; top: 0; left: 0;
-        width: 3px; height: 100%; background: var(--teal);
-        transform: scaleY(0); transition: transform 0.3s;
-        transform-origin: bottom;
-      }
-      .client-card:hover::before { transform: scaleY(1); }
-      .client-card:hover { box-shadow: 0 8px 32px rgba(27,107,90,0.08); }
-      .client-icon {
-        width: 48px; height: 48px; background: var(--teal-light);
-        border-radius: 4px; display: flex; align-items: center;
-        justify-content: center; font-size: 22px; margin-bottom: 16px;
-      }
-      .client-title { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
-      .client-desc { font-size: 13.5px; color: var(--ink-soft); line-height: 1.75; font-weight: 300; margin-bottom: 14px; }
-      .client-needs { list-style: none; display: flex; flex-direction: column; gap: 6px; }
-      .client-needs li { font-size: 13px; color: var(--ink-soft); padding-left: 16px; position: relative; }
-      .client-needs li::before { content: "✦"; position: absolute; left: 0; color: var(--teal); font-size: 9px; top: 3px; }
-      .why-me-grid {
-        display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
-        margin-top: 48px;
-      }
-      .why-card {
-        background: var(--teal); padding: 28px 24px; text-align: center;
-      }
-      .why-card:nth-child(even) { background: var(--teal-mid); }
-      .why-num {
-        font-family: 'DM Serif Display', serif;
-        font-size: 36px; color: rgba(255,255,255,0.25);
-        line-height: 1; margin-bottom: 8px;
-      }
-      .why-title { font-size: 14px; font-weight: 600; color: white; margin-bottom: 6px; }
-      .why-desc { font-size: 12px; color: rgba(255,255,255,0.7); line-height: 1.6; }
-      @media (max-width: 900px) {
-        .client-grid { grid-template-columns: 1fr 1fr; }
-        .why-me-grid { grid-template-columns: 1fr 1fr; }
-      }
-      @media (max-width: 600px) {
-        .client-grid { grid-template-columns: 1fr; }
-        .why-me-grid { grid-template-columns: 1fr 1fr; }
-      }
-    </style>
-
-    <div class="client-grid fade-up">
-
-      <div class="client-card">
-        <div class="client-icon">🏛️</div>
-        <div class="client-title">Nonprofits & NGOs</div>
-        <div class="client-desc">Mission-driven organizations that need clean, donor-ready books and grant-compliant financial reporting — in the US, UK, Canada, Australia, or Kenya.</div>
-        <ul class="client-needs">
-          <li>Fund & grant expenditure tracking</li>
-          <li>Donor-restricted vs. unrestricted reporting</li>
-          <li>FASB ASC 958 / UK Charities SORP compliance</li>
-          <li>IRS Form 990 reconciliation</li>
-          <li>Board-level financial reporting</li>
-        </ul>
-      </div>
-
-      <div class="client-card">
-        <div class="client-icon">🏪</div>
-        <div class="client-title">Small Businesses</div>
-        <div class="client-desc">Founders and business owners who want their books handled by a professional so they can focus on running the business, not chasing receipts.</div>
-        <ul class="client-needs">
-          <li>Monthly bookkeeping & reconciliation</li>
-          <li>Accounts payable & receivable</li>
-          <li>Cash flow monitoring</li>
-          <li>QuickBooks or Xero setup & cleanup</li>
-          <li>Tax-ready financial statements</li>
-        </ul>
-      </div>
-
-      <div class="client-card">
-        <div class="client-icon">🛒</div>
-        <div class="client-title">E-Commerce Stores</div>
-        <div class="client-desc">Online sellers who need someone to manage the financial side — reconciling platform payouts, tracking COGS, and producing clean monthly reports.</div>
-        <ul class="client-needs">
-          <li>Shopify / Amazon / Etsy payout reconciliation</li>
-          <li>COGS & inventory tracking</li>
-          <li>Sales tax awareness</li>
-          <li>Platform fee categorization</li>
-          <li>P&L by product/channel</li>
-        </ul>
-      </div>
-
-      <div class="client-card">
-        <div class="client-icon">⛪</div>
-        <div class="client-title">Churches & Faith Organizations</div>
-        <div class="client-desc">Religious organizations that need transparent, tithe-accurate financial records and fund-specific reporting for their congregations and leadership.</div>
-        <ul class="client-needs">
-          <li>Offering & tithe income tracking</li>
-          <li>Fund-specific expense reporting</li>
-          <li>Payroll for pastoral staff</li>
-          <li>Annual giving statements</li>
-          <li>Budget vs. actual reporting</li>
-        </ul>
-      </div>
-
-      <div class="client-card">
-        <div class="client-icon">🚀</div>
-        <div class="client-title">Startups & Freelancers</div>
-        <div class="client-desc">Early-stage businesses and independent professionals who need a bookkeeper without the overhead of a full-time hire.</div>
-        <ul class="client-needs">
-          <li>Clean books from day one</li>
-          <li>Invoice management & follow-up</li>
-          <li>Expense categorization</li>
-          <li>Monthly financial snapshots</li>
-          <li>Investor-ready reporting</li>
-        </ul>
-      </div>
-
-      <div class="client-card">
-        <div class="client-icon">🌍</div>
-        <div class="client-title">International & Remote Teams</div>
-        <div class="client-desc">Organizations in the US, UK, Canada, and Australia who need a reliable remote bookkeeper available across time zones without the cost of a local hire.</div>
-        <ul class="client-needs">
-          <li>Fully async — no fixed office hours required</li>
-          <li>USD, GBP, AUD, CAD, KES proficient</li>
-          <li>Multi-currency awareness</li>
-          <li>Cloud-based workflows only</li>
-          <li>Weekly or monthly check-in cadence</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- Why choose me -->
-    <div class="fade-up">
-      <div class="tools-section-title" style="color:var(--teal); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; display:flex; align-items:center; gap:12px; margin-bottom:0;">
-        Why Clients Choose Me
-        <span style="flex:1; height:1px; background:var(--rule); display:block;"></span>
-      </div>
-    </div>
-    <div class="why-me-grid fade-up">
-      <div class="why-card">
-        <div class="why-num">01</div>
-        <div class="why-title">Nonprofit Specialist</div>
-        <div class="why-desc">Two full case studies in QBO and Xero — including FASB ASC 958 and UK Charities SORP compliance. Not just familiar — practiced.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-num">02</div>
-        <div class="why-title">Certified & Qualified</div>
-        <div class="why-desc">QuickBooks Online Certified, BCom Finance, Advanced Excel — every credential is real, verified, and directly relevant to your books.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-num">03</div>
-        <div class="why-title">Remote-First</div>
-        <div class="why-desc">Built for async work — reliable communication, cloud-based tools, and deadline-driven delivery across any time zone.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-num">04</div>
-        <div class="why-title">AI-Powered Efficiency</div>
-        <div class="why-desc">AI-assisted workflows mean faster turnaround, fewer errors, and better output — without cutting corners on accuracy.</div>
-      </div>
-    </div>
-
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-head">
+    <div class="section-eyebrow">Real Feedback</div>
+    <h2>What people I've worked with say</h2>
   </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <p class="testi-quote">Caroline was one of the most reliable people on my team at KMTC. She managed our ledgers, reconciliations and expense tracking in Excel and IFMIS with real precision — the kind that catches a discrepancy before it becomes a real problem. She was ahead of the curve on digital workflows long before remote work became normal. I wasn't surprised when she moved into remote bookkeeping; she already had the discipline it takes. I recommend her without hesitation.</p>
+      <div class="testi-who">
+        <div class="testi-avatar">KK</div>
+        <div>
+          <div class="testi-name">Kennedy C. Koinange</div>
+          <div class="testi-role">Senior Accountant, Kenya Medical Training College (KMTC)</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <p class="testi-quote">Caroline transformed how we handle our finances. She keeps our books in QuickBooks pristine and tax-ready, and she didn't stop there — she integrated our CRM and brought in AI tools to automate the repetitive work, turning a clunky process into something genuinely efficient. She's organized, communicative, and works with real autonomy across time zones. If you want a bookkeeper who actually modernizes your finance function, I can't recommend her highly enough.</p>
+      <div class="testi-who">
+        <div class="testi-avatar gold">JL</div>
+        <div>
+          <div class="testi-name">John Lowe</div>
+          <div class="testi-role">Founder, Small Business — United States</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="height:56px;"></div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education">
-  <div class="section-label fade-up">
-    <h2>Education</h2>
-    <span>Qualifications</span>
+<!-- TRUST -->
+<div id="trust">
+  <div class="section-head" style="padding-top:80px;">
+    <div class="section-eyebrow">Before You Hand Over Your Numbers</div>
+    <h2>Why you can trust me with this</h2>
   </div>
-  <div class="edu-grid fade-up">
-    <div class="edu-card">
-      <div class="edu-card-type">Degree</div>
-      <div class="edu-degree">Bachelor of Commerce — Finance</div>
-      <div class="edu-school">Masinde Muliro University of Science and Technology</div>
-      <div class="edu-year">2018 – 2022</div>
-      <div class="edu-desc">Financial Accounting · Management Accounting · Corporate Finance · Business Law · Economics</div>
+  <div class="trust-grid">
+    <div class="trust-card">
+      <div class="trust-icon">🔒</div>
+      <div class="trust-title">Confidentiality First</div>
+      <div class="trust-desc">Happy to sign an NDA before any data is shared. Client information never appears in examples or case studies without explicit permission.</div>
     </div>
-    <div class="edu-card">
-      <div class="edu-card-type">Certification</div>
-      <div class="edu-degree">QuickBooks Online Certification</div>
-      <div class="edu-school">Intuit · QuickBooks Online Accountant</div>
-      <div class="edu-year">2024</div>
-      <div class="edu-desc">Full-cycle bookkeeping, bank reconciliation, financial reporting, invoicing, and QBOA client management.</div>
+    <div class="trust-card">
+      <div class="trust-icon">🛡️</div>
+      <div class="trust-title">Secure Tools Only</div>
+      <div class="trust-desc">Work exclusively inside QuickBooks Online and Xero's own secure environments — no spreadsheets emailed back and forth with sensitive data.</div>
     </div>
-    <div class="edu-card">
-      <div class="edu-card-type">Course</div>
-      <div class="edu-degree">Excel Fundamentals for Finance</div>
-      <div class="edu-school">DataCamp</div>
-      <div class="edu-year">2025</div>
-      <div class="edu-desc">Pivot tables, VLOOKUP, nested formulas, data visualization, and dynamic financial dashboards.</div>
-    </div>
-    <div class="edu-card">
-      <div class="edu-card-type">Course</div>
-      <div class="edu-degree">Microsoft AI Fluency</div>
-      <div class="edu-school">Microsoft Learn</div>
-      <div class="edu-year">2025</div>
-      <div class="edu-desc">Foundational AI concepts, responsible AI principles, and practical AI tools in professional workflows.</div>
+    <div class="trust-card">
+      <div class="trust-icon">🎓</div>
+      <div class="trust-title">Certified & Accountable</div>
+      <div class="trust-desc">QuickBooks Online Certified, Xero-proficient, BCom Finance. Every case study above is independently verifiable against public records.</div>
     </div>
   </div>
-</section>
-
-<!-- PROJECTS -->
-<div id="projects" style="background:var(--off-white); padding: 96px 0;">
-  <div class="section-label fade-up" style="max-width:1100px; margin:0 auto 48px; padding:0 40px;">
-    <h2>Work Samples</h2>
-    <span>Projects</span>
-  </div>
-
-  <!-- ── FEATURED PROJECT: Heritage Humane Society QBO ── -->
-  <style>
-    .featured-project {
-      max-width: 1100px; margin: 0 auto 4px; padding: 0 40px 40px;
-    }
-    .featured-label {
-      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--teal);
-      display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
-    }
-    .featured-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
-    .featured-inner {
-      background: white; border: 1px solid var(--rule); overflow: hidden;
-    }
-    .featured-top {
-      background: var(--teal); padding: 32px 40px;
-      display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center;
-    }
-    .featured-org { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
-    .featured-title { font-family: 'DM Serif Display', serif; font-size: 28px; color: white; line-height: 1.2; margin-bottom: 10px; }
-    .featured-sub { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.7; font-weight: 300; }
-    .featured-stats { display: flex; gap: 24px; flex-wrap: wrap; }
-    .feat-stat { text-align: right; }
-    .feat-stat-num { font-family: 'DM Serif Display', serif; font-size: 28px; color: #9FE1CB; line-height: 1; }
-    .feat-stat-label { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.06em; }
-    .featured-reports {
-      display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;
-    }
-    .report-thumb {
-      position: relative; overflow: hidden; cursor: pointer;
-      border-right: 1px solid var(--rule);
-      aspect-ratio: 4/3;
-    }
-    .report-thumb:last-child { border-right: none; }
-    .report-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top left; transition: transform 0.4s; }
-    .report-thumb:hover img { transform: scale(1.05); }
-    .report-overlay {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      background: linear-gradient(transparent, rgba(27,107,90,0.92));
-      padding: 28px 12px 10px; opacity: 0; transition: opacity 0.3s;
-    }
-    .report-thumb:hover .report-overlay { opacity: 1; }
-    .report-name { font-size: 11px; font-weight: 600; color: white; text-align: center; line-height: 1.4; }
-    .featured-body { padding: 32px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-    .feat-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.85; font-weight: 300; }
-    .feat-desc strong { color: var(--ink); font-weight: 500; }
-    .feat-skills { }
-    .feat-skills-title { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
-    .feat-skill-list { display: flex; flex-wrap: wrap; gap: 7px; }
-    .feat-skill {
-      font-size: 11px; font-weight: 500; padding: 5px 12px;
-      border-radius: 2px; background: var(--teal-pale);
-      color: var(--teal); border: 1px solid var(--teal-light);
-    }
-    .featured-footer {
-      border-top: 1px solid var(--rule); padding: 16px 40px;
-      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-    }
-    @media (max-width: 900px) {
-      .featured-top { grid-template-columns: 1fr; }
-      .featured-stats { flex-direction: row; }
-      .feat-stat { text-align: left; }
-      .featured-reports { grid-template-columns: repeat(3, 1fr); }
-      .featured-body { grid-template-columns: 1fr; gap: 24px; }
-    }
-    @media (max-width: 600px) {
-      .featured-reports { grid-template-columns: repeat(2, 1fr); }
-    }
-  </style>
-
-  <div class="featured-project fade-up">
-    <div class="featured-label">★ Featured Project</div>
-    <div class="featured-inner">
-
-      <!-- HERO HEADER -->
-      <div class="featured-top">
-        <div>
-          <div class="featured-org">Nonprofit QuickBooks Online Case Study — Heritage Humane Society, Williamsburg VA</div>
-          <div class="featured-title">Full-Cycle QBO Bookkeeping<br>from Setup to Financial Statements</div>
-          <div class="featured-sub">Built a complete QuickBooks Online Accountant environment for a real nonprofit — chart of accounts, 16 donors, 11 vendors, 6 program classes, 12 months of accrual-basis transactions, and year-end adjusting entries — all reconciled to within 1.6% of IRS Form 990 public data.</div>
-        </div>
-        <div class="featured-stats">
-          <div class="feat-stat">
-            <div class="feat-stat-num">$1.8M</div>
-            <div class="feat-stat-label">Revenue Recorded</div>
-          </div>
-          <div class="feat-stat">
-            <div class="feat-stat-num">12</div>
-            <div class="feat-stat-label">Months of Transactions</div>
-          </div>
-          <div class="feat-stat">
-            <div class="feat-stat-num">47</div>
-            <div class="feat-stat-label">Accounts in COA</div>
-          </div>
-          <div class="feat-stat">
-            <div class="feat-stat-num">11</div>
-            <div class="feat-stat-label">Phases Completed</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ROW LABEL: QBO SETUP SCREENSHOTS -->
-      <div style="background:#F2FAF8; border-top: 1px solid #D4E8E2; border-bottom:1px solid #D4E8E2; padding: 10px 28px; display:flex; align-items:center; gap:10px;">
-        <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#1B6B5A;">Live QBO Screenshots</span>
-        <span style="font-size:12px; color:#777; font-style:italic;">— Actual QuickBooks Online Accountant interface showing setup work</span>
-      </div>
-
-      <!-- ROW 1: 3 Live QBO Screenshots -->
-      <div class="featured-reports" style="grid-template-columns: repeat(3,1fr);">
-        <div class="report-thumb">
-          <img src="QBO_Customers_List_1.png" alt="Donor and Customer List Page 1 in QuickBooks Online" onerror="this.style.background='#E8F5F1'"/>
-          <div class="report-overlay">
-            <div class="report-name">Donor List — Foundations & Government</div>
-          </div>
-        </div>
-        <div class="report-thumb">
-          <img src="QBO_Customers_List_2.png" alt="Donor and Customer List Page 2 in QuickBooks Online" onerror="this.style.background='#E8F5F1'"/>
-          <div class="report-overlay">
-            <div class="report-name">Donor List — Individual & Corporate Donors</div>
-          </div>
-        </div>
-        <div class="report-thumb">
-          <img src="QBO_Classes_Live.png" alt="6 Program Classes set up in QuickBooks Online" onerror="this.style.background='#E8F5F1'"/>
-          <div class="report-overlay">
-            <div class="report-name">6 Program Classes — FASB ASC 958 Tracking</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ROW LABEL: FINANCIAL REPORTS -->
-      <div style="background:#F2FAF8; border-top: 1px solid #D4E8E2; border-bottom:1px solid #D4E8E2; padding: 10px 28px; display:flex; align-items:center; gap:10px;">
-        <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#1B6B5A;">Generated Financial Reports</span>
-        <span style="font-size:12px; color:#777; font-style:italic;">— Exported from QBO after 12-month transaction recording</span>
-      </div>
-
-      <!-- ROW 2: 4 Financial Report Thumbnails + 1 Classes -->
-      <div class="featured-reports" style="grid-template-columns: repeat(4,1fr);">
-        <div class="report-thumb">
-          <img src="QBO_Statement_of_Activity.png" alt="Statement of Activity" onerror="this.style.background='#E8F5F1'"/>
-          <div class="report-overlay"><div class="report-name">Statement of Activity (P&L)</div></div>
-        </div>
-        <div class="report-thumb">
-          <img src="QBO_Statement_of_Financial_Position.png" alt="Statement of Financial Position" onerror="this.style.background='#E8F5F1'"/>
-          <div class="report-overlay"><div class="report-name">Statement of Financial Position</div></div>
-        </div>
-        <div class="report-thumb">
-          <img src="QBO_Statement_of_Activity_by_Class.png" alt="Statement of Activity by Class" onerror="this.style.background='#E8F5F1'"/>
-          <div class="report-overlay"><div class="report-name">Activity by Class (6 Programs)</div></div>
-        </div>
-        <div class="report-thumb">
-          <img src="QBO_Statement_of_Cash_Flows.png" alt="Statement of Cash Flows" onerror="this.style.background='#E8F5F1'"/>
-          <div class="report-overlay"><div class="report-name">Statement of Cash Flows</div></div>
-        </div>
-      </div>
-
-      <!-- BODY: Description + Process + Skills -->
-      <div class="featured-body" style="grid-template-columns: 1fr 1fr 1fr; gap:32px;">
-
-        <div class="feat-desc">
-          <div class="feat-skills-title" style="margin-bottom:10px;">About This Project</div>
-          Used ProPublica's Nonprofit Explorer to source real IRS Form 990 data for <strong>Heritage Humane Society</strong> (FY2024: $1,772,742 revenue). Reconstructed their complete books in QBO — building from scratch, recording every transaction, and generating all four nonprofit financial statements. Final figures reconcile to <strong>within 1.6% of Form 990 reported totals.</strong>
-        </div>
-
-        <div>
-          <div class="feat-skills-title" style="margin-bottom:10px;">11-Phase Process</div>
-          <div style="font-size:13px; color:var(--ink-soft); line-height:1.9; font-weight:300;">
-            ✦ Research &amp; planning from IRS 990 data<br>
-            ✦ QBOA company setup (accrual, classes, fiscal year)<br>
-            ✦ 47-account Chart of Accounts via CSV import<br>
-            ✦ Opening balances journal entry (JE-001)<br>
-            ✦ 11 vendors + 16 donors imported via CSV<br>
-            ✦ 6 program classes for FASB ASC 958 compliance<br>
-            ✦ 12 months income &amp; expense transactions<br>
-            ✦ Bank feed import &amp; categorization<br>
-            ✦ Error identification &amp; correction (duplicates, wrong accounts)<br>
-            ✦ Year-end adjusting entries (depreciation, payroll accrual)<br>
-            ✦ Full nonprofit financial statement generation
-          </div>
-        </div>
-
-        <div class="feat-skills">
-          <div class="feat-skills-title" style="margin-bottom:10px;">Skills Demonstrated</div>
-          <div class="feat-skill-list">
-            <span class="feat-skill">QuickBooks Online Accountant</span>
-            <span class="feat-skill">Nonprofit Accounting</span>
-            <span class="feat-skill">Chart of Accounts Design</span>
-            <span class="feat-skill">Class Tracking</span>
-            <span class="feat-skill">Accrual Basis Bookkeeping</span>
-            <span class="feat-skill">Journal Entries</span>
-            <span class="feat-skill">Depreciation</span>
-            <span class="feat-skill">Bank Feed Import</span>
-            <span class="feat-skill">Vendor & Donor Management</span>
-            <span class="feat-skill">FASB ASC 958</span>
-            <span class="feat-skill">IRS Form 990 Reconciliation</span>
-            <span class="feat-skill">Error Correction</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- FOOTER: Download buttons -->
-      <div class="featured-footer">
-        <span style="font-size:12px; color:var(--ink-soft); font-weight:500; margin-right:4px;">Download Reports:</span>
-        <a href="Statement_of_Activity.pdf" target="_blank" class="btn-download primary">↗ Statement of Activity</a>
-        <a href="Statement_of_Financial_Position.pdf" target="_blank" class="btn-download secondary">↗ Financial Position</a>
-        <a href="Statement_of_Activity_by_Class.pdf" target="_blank" class="btn-download secondary">↗ Activity by Class</a>
-        <a href="Statement_of_Cash_Flows.pdf" target="_blank" class="btn-download secondary">↗ Cash Flows</a>
-        <a href="QuickBooks_classes.pdf" target="_blank" class="btn-download secondary">↗ Classes Setup</a>
-      </div>
-
-    </div>
-  </div>
-
-
-  <!-- ── FEATURED PROJECT 2: NARTHEX SPARKHILL XERO ── -->
-  <div class="featured-project fade-up" style="margin-top: 48px;">
-    <div class="featured-label" style="color:#005B9E;">★ Featured Project</div>
-    <div class="featured-inner" style="border-color:#BDD9EF;">
-
-      <!-- HERO HEADER -->
-      <div class="featured-top" style="background:#005B9E;">
-        <div>
-          <div class="featured-org" style="color:rgba(255,255,255,0.6);">UK Charity Xero Bookkeeping Case Study — Narthex Sparkhill, Birmingham UK</div>
-          <div class="featured-title">Full-Cycle Xero Bookkeeping<br>UK Charities SORP Framework</div>
-          <div class="featured-sub">Built a complete Xero accounting environment for a real UK charity — UK Charities SORP-compliant chart of accounts, 31 contacts, 7 programme tracking categories, 215 bank transactions, and year-end depreciation — reconciled to within 0.3% of real filed accounts.</div>
-        </div>
-        <div class="featured-stats">
-          <div class="feat-stat">
-            <div class="feat-stat-num" style="color:#7EC8E3;">£909K</div>
-            <div class="feat-stat-label">Income Recorded</div>
-          </div>
-          <div class="feat-stat">
-            <div class="feat-stat-num" style="color:#7EC8E3;">215</div>
-            <div class="feat-stat-label">Bank Transactions</div>
-          </div>
-          <div class="feat-stat">
-            <div class="feat-stat-num" style="color:#7EC8E3;">7</div>
-            <div class="feat-stat-label">Programme Categories</div>
-          </div>
-          <div class="feat-stat">
-            <div class="feat-stat-num" style="color:#7EC8E3;">0.3%</div>
-            <div class="feat-stat-label">Variance from Filed Accounts</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ROW 1: Live Xero Screenshots — Reports -->
-      <div style="background:#EAF4FB; border-top:1px solid #BDD9EF; border-bottom:1px solid #BDD9EF; padding:10px 28px; display:flex; align-items:center; gap:10px;">
-        <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#005B9E;">Live Xero Reports</span>
-        <span style="font-size:12px; color:#777; font-style:italic;">— Generated directly from Xero after 13-phase setup and transaction recording</span>
-      </div>
-      <div class="featured-reports" style="grid-template-columns:repeat(3,1fr);">
-        <div class="report-thumb">
-          <img src="Xero_PnL_Live.png" alt="Xero Profit and Loss Report" onerror="this.style.background='#EAF4FB'"/>
-          <div class="report-overlay"><div class="report-name">Profit & Loss — Full Year</div></div>
-        </div>
-        <div class="report-thumb">
-          <img src="Xero_Balance_Sheet_Live.png" alt="Xero Balance Sheet" onerror="this.style.background='#EAF4FB'"/>
-          <div class="report-overlay"><div class="report-name">Balance Sheet — 31 Dec 2024</div></div>
-        </div>
-        <div class="report-thumb">
-          <img src="Xero_PnL_Programme_Live.png" alt="Xero P&L by Programme" onerror="this.style.background='#EAF4FB'"/>
-          <div class="report-overlay"><div class="report-name">P&L by Programme — 7 Services</div></div>
-        </div>
-      </div>
-
-      <!-- ROW 2: Setup Screenshots -->
-      <div style="background:#EAF4FB; border-top:1px solid #BDD9EF; border-bottom:1px solid #BDD9EF; padding:10px 28px; display:flex; align-items:center; gap:10px;">
-        <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#005B9E;">Xero Setup Screenshots</span>
-        <span style="font-size:12px; color:#777; font-style:italic;">— Chart of Accounts, Contacts & Tracking Categories inside live Xero</span>
-      </div>
-      <div class="featured-reports" style="grid-template-columns:repeat(5,1fr);">
-        <div class="report-thumb">
-          <img src="Xero_COA_1.png" alt="Xero Chart of Accounts Page 1" onerror="this.style.background='#EAF4FB'"/>
-          <div class="report-overlay" style="background:linear-gradient(transparent, rgba(0,91,158,0.92));"><div class="report-name">Chart of Accounts — Revenue & Direct Costs</div></div>
-        </div>
-        <div class="report-thumb">
-          <img src="Xero_COA_2.png" alt="Xero Chart of Accounts Page 2" onerror="this.style.background='#EAF4FB'"/>
-          <div class="report-overlay" style="background:linear-gradient(transparent, rgba(0,91,158,0.92));"><div class="report-name">Chart of Accounts — Overhead Expenses</div></div>
-        </div>
-        <div class="report-thumb">
-          <img src="Xero_COA_3.png" alt="Xero Chart of Accounts Page 3" onerror="this.style.background='#EAF4FB'"/>
-          <div class="report-overlay" style="background:linear-gradient(transparent, rgba(0,91,158,0.92));"><div class="report-name">Chart of Accounts — Assets, Liabilities & Equity</div></div>
-        </div>
-        <div class="report-thumb">
-          <img src="Xero_Contacts_1.png" alt="Xero Contacts List" onerror="this.style.background='#EAF4FB'"/>
-          <div class="report-overlay" style="background:linear-gradient(transparent, rgba(0,91,158,0.92));"><div class="report-name">Contacts — Funders & Suppliers</div></div>
-        </div>
-        <div class="report-thumb">
-          <img src="Xero_Tracking_Categories.png" alt="Xero Tracking Categories" onerror="this.style.background='#EAF4FB'"/>
-          <div class="report-overlay" style="background:linear-gradient(transparent, rgba(0,91,158,0.92));"><div class="report-name">Tracking Categories — 7 Programmes</div></div>
-        </div>
-      </div>
-
-      <!-- BODY -->
-      <div class="featured-body" style="grid-template-columns:1fr 1fr 1fr; gap:32px;">
-        <div class="feat-desc">
-          <div class="feat-skills-title" style="margin-bottom:10px;">About This Project</div>
-          Reconstructed the complete books of <strong>Narthex Sparkhill</strong> (Birmingham, UK) — a real registered charity — in Xero. Built from scratch using <strong>UK Charities SORP framework</strong>, designed a 30-account chart of accounts, imported 31 contacts, set up 7 programme tracking categories, and processed 215 bank transactions via bulk import and Cash Coding. Final P&L reconciles to within <strong>0.3% of real filed accounts</strong>.
-        </div>
-        <div>
-          <div class="feat-skills-title" style="margin-bottom:10px;">13-Phase Process</div>
-          <div style="font-size:13px; color:var(--ink-soft); line-height:1.9; font-weight:300;">
-            ✦ Real charity data sourced from public filings<br>
-            ✦ Xero org setup: GBP, UK fiscal year, VAT defaults<br>
-            ✦ UK Charities SORP Chart of Accounts (30 accounts)<br>
-            ✦ CSV import debugging (3 attempts — fixed type codes)<br>
-            ✦ Opening balances journal — debits = credits = £260,000<br>
-            ✦ 31 contacts (funders, donors, suppliers) via CSV<br>
-            ✦ 7 Programme tracking categories<br>
-            ✦ 215 bank transactions via statement import<br>
-            ✦ Cash Coding bulk categorization<br>
-            ✦ Birmingham City Council grant invoice cycle<br>
-            ✦ Year-end depreciation journal — £9,921<br>
-            ✦ 3 financial reports generated<br>
-            ✦ Reconciled to real published charity accounts
-          </div>
-        </div>
-        <div class="feat-skills">
-          <div class="feat-skills-title" style="margin-bottom:10px;">Skills Demonstrated</div>
-          <div class="feat-skill-list">
-            <span class="feat-skill" style="background:#EAF4FB; color:#005B9E; border-color:#BDD9EF;">Xero Accounting</span>
-            <span class="feat-skill" style="background:#EAF4FB; color:#005B9E; border-color:#BDD9EF;">UK Charities SORP</span>
-            <span class="feat-skill" style="background:#EAF4FB; color:#005B9E; border-color:#BDD9EF;">Restricted Funds</span>
-            <span class="feat-skill" style="background:#EAF4FB; color:#005B9E; border-color:#BDD9EF;">Tracking Categories</span>
-            <span class="feat-skill" style="background:#EAF4FB; color:#005B9E; border-color:#BDD9EF;">Bank Statement Import</span>
-            <span class="feat-skill" style="background:#EAF4FB; color:#005B9E; border-color:#BDD9EF;">Cash Coding</span>
-            <span class="feat-skill" style="background:#EAF4FB; color:#005B9E; border-color:#BDD9EF;">Chart of Accounts Design</span>
-            <span class="feat-skill" style="background:#EAF4FB; color:#005B9E; border-color:#BDD9EF;">CSV Import Debugging</span>
-            <span class="feat-skill" style="background:#EAF4FB; color:#005B9E; border-color:#BDD9EF;">Journal Entries</span>
-            <span class="feat-skill" style="background:#EAF4FB; color:#005B9E; border-color:#BDD9EF;">Depreciation</span>
-            <span class="feat-skill" style="background:#EAF4FB; color:#005B9E; border-color:#BDD9EF;">Programme Reporting</span>
-            <span class="feat-skill" style="background:#EAF4FB; color:#005B9E; border-color:#BDD9EF;">GBP Accounting</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- FOOTER -->
-      <div class="featured-footer" style="border-top-color:#BDD9EF;">
-        <span style="font-size:12px; color:var(--ink-soft); font-weight:500; margin-right:4px;">Download Reports:</span>
-        <a href="Narthex_Sparkhill_-_Profit_and_Loss.pdf" target="_blank" class="btn-download primary" style="background:#005B9E; border-color:#005B9E;">↗ Profit & Loss</a>
-        <a href="Narthex_Sparkhill_-_Profit_and_Loss__1_.pdf" target="_blank" class="btn-download secondary" style="color:#005B9E; border-color:#BDD9EF;">↗ P&L by Programme</a>
-        <a href="Narthex_Sparkhill_-_Balance_Sheet.pdf" target="_blank" class="btn-download secondary" style="color:#005B9E; border-color:#BDD9EF;">↗ Balance Sheet</a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ── OTHER PROJECTS GRID ── -->
-  <div class="section-label fade-up" style="max-width:1100px; margin: 48px auto 24px; padding:0 40px;">
-    <h2 style="font-size:22px; font-family:'DM Serif Display',serif; font-weight:400;">More Projects</h2>
-  </div>
-  <style>
-    .projects-grid-new {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
-      max-width: 1100px; margin: 0 auto; padding: 0 40px;
-    }
-    @media (max-width: 900px) {
-      .projects-grid-new { grid-template-columns: 1fr 1fr; }
-    }
-    .project-card-new {
-      background: white; border: 1px solid var(--rule);
-      transition: all 0.25s; overflow: hidden;
-    }
-    .project-card-new:hover { box-shadow: 0 8px 32px rgba(27,107,90,0.12); }
-    .project-img-wrap {
-      width: 100%; aspect-ratio: 3/2; overflow: hidden;
-      background: var(--teal-light); position: relative;
-    }
-    .project-img-wrap img {
-      width: 100%; height: 100%; object-fit: cover;
-      object-position: top left;
-      transition: transform 0.4s ease;
-    }
-    .project-card-new:hover .project-img-wrap img { transform: scale(1.03); }
-    .project-img-placeholder {
-      width: 100%; height: 100%;
-      display: flex; align-items: center; justify-content: center;
-      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-mid) 100%);
-      font-family: 'DM Serif Display', serif;
-      font-size: 48px; color: rgba(255,255,255,0.15);
-    }
-    .project-body { padding: 28px 28px 24px; }
-    .project-cat {
-      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--teal); margin-bottom: 8px;
-    }
-    .project-title-new {
-      font-size: 17px; font-weight: 600; color: var(--ink);
-      margin-bottom: 10px; line-height: 1.35;
-    }
-    .project-desc-new {
-      font-size: 13.5px; color: var(--ink-soft);
-      line-height: 1.75; font-weight: 300; margin-bottom: 16px;
-    }
-    .project-tools-new { display: flex; flex-wrap: wrap; gap: 6px; }
-    .project-tool-new {
-      font-size: 11px; font-weight: 500; padding: 4px 10px;
-      border-radius: 2px; background: var(--teal-pale);
-      color: var(--teal); border: 1px solid var(--teal-light);
-    }
-    .project-actions {
-      display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap;
-    }
-    .btn-download {
-      display: inline-flex; align-items: center; gap: 7px;
-      font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
-      text-transform: uppercase; padding: 9px 18px;
-      border-radius: 2px; text-decoration: none;
-      transition: all 0.2s;
-    }
-    .btn-download.primary {
-      background: var(--teal); color: white; border: 2px solid var(--teal);
-    }
-    .btn-download.primary:hover { background: var(--teal-mid); border-color: var(--teal-mid); }
-    .btn-download.secondary {
-      background: transparent; color: var(--teal);
-      border: 2px solid var(--teal-light);
-    }
-    .btn-download.secondary:hover { border-color: var(--teal); background: var(--teal-pale); }
-    @media (max-width: 700px) {
-      .projects-grid-new { grid-template-columns: 1fr; }
-    }
-  </style>
-
-  <div class="projects-grid-new fade-up">
-
-    <!-- Project 1 -->
-    <div class="project-card-new">
-      <div class="project-img-wrap">
-        <img src="Project1_Bookkeeping_Report.png"
-             alt="Monthly Bookkeeping Report showing P&L Statement and Balance Sheet"
-             onerror="this.parentElement.innerHTML='<div class=\'project-img-placeholder\'>01</div>'"/>
-      </div>
-      <div class="project-body">
-        <div class="project-cat">Bookkeeping · Financial Reporting</div>
-        <div class="project-title-new">Monthly Bookkeeping Report — P&L & Balance Sheet</div>
-        <div class="project-desc-new">Prepared a full monthly bookkeeping report for a consulting firm covering Q1 2026. Includes a 3-month Profit & Loss Statement with revenue breakdown, operating expenses, net profit, and margin analysis — plus a complete Balance Sheet with assets, liabilities, and owner's equity.</div>
-        <div class="project-tools-new">
-          <span class="project-tool-new">QuickBooks Online</span>
-          <span class="project-tool-new">Microsoft Excel</span>
-          <span class="project-tool-new">Financial Reporting</span>
-          <span class="project-tool-new">Balance Sheet</span>
-        </div>
-        <div class="project-actions">
-          <a href="Monthly_Bookkeeping_Report.xlsx" download class="btn-download primary">
-            ↓ Download Excel
-          </a>
-          <a href="Project1_Bookkeeping_Report.png" target="_blank" class="btn-download secondary">
-            ↗ View Screenshot
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project-card-new">
-      <div class="project-img-wrap">
-        <img src="Project2_KPI_Dashboard.png"
-             alt="Financial KPI Dashboard showing quarterly metrics and revenue chart"
-             onerror="this.parentElement.innerHTML='<div class=\'project-img-placeholder\'>02</div>'"/>
-      </div>
-      <div class="project-body">
-        <div class="project-cat">Data Visualization · Excel</div>
-        <div class="project-title-new">Financial KPI Dashboard — FY 2025/2026</div>
-        <div class="project-desc-new">Designed a full-year KPI dashboard tracking 8 financial metrics across Q1–Q4 including revenue, gross margin, net profit margin, and expense ratio. Features quarterly target tracking, a revenue vs profit bar chart, and color-coded performance indicators.</div>
-        <div class="project-tools-new">
-          <span class="project-tool-new">Microsoft Excel</span>
-          <span class="project-tool-new">Pivot Tables</span>
-          <span class="project-tool-new">Data Visualization</span>
-          <span class="project-tool-new">KPI Tracking</span>
-        </div>
-        <div class="project-actions">
-          <a href="Financial_KPI_Dashboard.xlsx" download class="btn-download primary">
-            ↓ Download Excel
-          </a>
-          <a href="Project2_KPI_Dashboard.png" target="_blank" class="btn-download secondary">
-            ↗ View Screenshot
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project-card-new">
-      <div class="project-img-wrap">
-        <img src="Project3_Invoice_Processing.png"
-             alt="Invoice Processing Sample showing raw data cleaned into audit-ready records"
-             onerror="this.parentElement.innerHTML='<div class=\'project-img-placeholder\'>03</div>'"/>
-      </div>
-      <div class="project-body">
-        <div class="project-cat">Data Cleaning · AI-Assisted Workflows</div>
-        <div class="project-title-new">AI-Assisted Invoice Processing & Data Cleaning</div>
-        <div class="project-desc-new">End-to-end invoice processing workflow — 12 raw invoices with formatting errors, duplicates, missing categories, and currency mismatches transformed into a clean, audit-ready dataset. Identified 2 duplicate invoices, standardized all formats, and delivered a reconciled KES 909,200 summary.</div>
-        <div class="project-tools-new">
-          <span class="project-tool-new">Data Cleaning</span>
-          <span class="project-tool-new">AI Workflows</span>
-          <span class="project-tool-new">Invoice Processing</span>
-          <span class="project-tool-new">Excel</span>
-        </div>
-        <div class="project-actions">
-          <a href="Invoice_Processing_Sample.xlsx" download class="btn-download primary">
-            ↓ Download Excel
-          </a>
-          <a href="Project3_Invoice_Processing.png" target="_blank" class="btn-download secondary">
-            ↗ View Screenshot
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 4 -->
-    <div class="project-card-new">
-      <div class="project-img-wrap">
-        <div class="project-img-placeholder">04</div>
-      </div>
-      <div class="project-body">
-        <div class="project-cat">Bookkeeping · Remote Work</div>
-        <div class="project-title-new">Remote Bookkeeping — Private Client (3 Years)</div>
-        <div class="project-desc-new">Three-year remote bookkeeping engagement for a private company. Delivered monthly financial reports, maintained clean QuickBooks Online records, performed bank reconciliations, and managed AP/AR processes throughout the engagement.</div>
-        <div class="project-tools-new">
-          <span class="project-tool-new">QuickBooks Online</span>
-          <span class="project-tool-new">Bank Reconciliation</span>
-          <span class="project-tool-new">Financial Reporting</span>
-          <span class="project-tool-new">Remote Work</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 5 -->
-    <div class="project-card-new">
-      <div class="project-img-wrap">
-        <div class="project-img-placeholder">05</div>
-      </div>
-      <div class="project-body">
-        <div class="project-cat">Excel · Financial Templates</div>
-        <div class="project-title-new">KES Bookkeeping Template for Kenyan Businesses</div>
-        <div class="project-desc-new">A custom Excel bookkeeping template built specifically for Kenyan businesses — KES-formatted with five sheets: Dashboard, Chart of Accounts, Income & Expenses, Bank Reconciliation, and Transaction Log. Includes dynamic formulas and an automated summary dashboard.</div>
-        <div class="project-tools-new">
-          <span class="project-tool-new">Microsoft Excel</span>
-          <span class="project-tool-new">Pivot Tables</span>
-          <span class="project-tool-new">Financial Dashboards</span>
-          <span class="project-tool-new">KES Formatting</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 6 -->
-    <div class="project-card-new">
-      <div class="project-img-wrap">
-        <div class="project-img-placeholder">06</div>
-      </div>
-      <div class="project-body">
-        <div class="project-cat">AI Data · Annotation</div>
-        <div class="project-title-new">AI Training Data Annotation — iMerit Scholars</div>
-        <div class="project-desc-new">Contributed to machine learning model improvement at iMerit Scholars by annotating and validating datasets over a 4-month contract. Applied consistent labeling standards across large data volumes with high accuracy rates in a fully remote, deadline-driven environment.</div>
-        <div class="project-tools-new">
-          <span class="project-tool-new">Data Annotation</span>
-          <span class="project-tool-new">AI Training</span>
-          <span class="project-tool-new">Quality Assurance</span>
-          <span class="project-tool-new">Remote Work</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Long Island Youth Mentoring -->
-    <div class="project-card-new" style="grid-column: 1 / -1;">
-      <style>
-        .liym-inner { display: grid; grid-template-columns: 1fr 1fr; }
-        .liym-images { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
-        .liym-images .report-thumb { aspect-ratio: 16/9; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-        .liym-images .report-thumb:nth-child(2) { border-right: none; }
-        .liym-images .report-thumb:nth-child(3) { border-bottom: none; }
-        .liym-images .report-thumb:nth-child(4) { border-right: none; border-bottom: none; }
-        .liym-body { padding: 32px 36px; display: flex; flex-direction: column; justify-content: space-between; border-left: 1px solid var(--rule); }
-        .liym-kpi-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 20px 0; }
-        .liym-kpi { background: var(--teal-pale); border: 1px solid var(--teal-light); border-radius: 4px; padding: 14px 12px; text-align: center; }
-        .liym-kpi-num { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--teal); line-height: 1; margin-bottom: 4px; }
-        .liym-kpi-label { font-size: 11px; color: var(--ink-soft); line-height: 1.4; }
-        .liym-critique { background: #FFF8E6; border: 1px solid #F0D080; border-radius: 4px; padding: 12px 14px; margin-top: 16px; }
-        .liym-critique-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #B8860B; margin-bottom: 5px; }
-        .liym-critique-text { font-size: 12px; color: #6B5000; line-height: 1.65; }
-        @media (max-width: 900px) {
-          .liym-inner { grid-template-columns: 1fr; }
-          .liym-body { border-left: none; border-top: 1px solid var(--rule); }
-        }
-      </style>
-      <div class="project-body" style="padding: 0;">
-        <!-- Header strip -->
-        <div style="padding: 20px 28px 18px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-          <div>
-            <div class="project-cat">Financial Analysis · Nonprofit · Data Visualization</div>
-            <div class="project-title-new" style="margin-bottom: 0;">Nonprofit Financial Health Analysis — Long Island Youth Mentoring Inc.</div>
-          </div>
-          <div style="display:flex; gap:8px; flex-wrap:wrap;">
-            <span class="project-tool-new">IRS Form 990</span>
-            <span class="project-tool-new">Google Sheets</span>
-            <span class="project-tool-new">Ratio Analysis</span>
-            <span class="project-tool-new">Data Visualization</span>
-            <span class="project-tool-new">FASB ASC 958</span>
-          </div>
-        </div>
-        <!-- Main body -->
-        <div class="liym-inner">
-          <!-- Left: 4 screenshots in 2x2 grid -->
-          <div class="liym-images">
-            <div class="report-thumb">
-              <img src="LIYM_Dashboard_Summary.png" alt="Financial Health Snapshot Dashboard" onerror="this.parentElement.innerHTML='<div style=\'background:#E8F5F1;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#777;\'>Dashboard Summary</div>'"/>
-              <div class="report-overlay"><div class="report-name">Summary Dashboard</div></div>
-            </div>
-            <div class="report-thumb">
-              <img src="LIYM_Revenue_Chart.png" alt="5-Year Revenue Trend Chart" onerror="this.parentElement.innerHTML='<div style=\'background:#E8F5F1;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#777;\'>Revenue Chart</div>'"/>
-              <div class="report-overlay"><div class="report-name">5-Year Revenue Trend</div></div>
-            </div>
-            <div class="report-thumb">
-              <img src="LIYM_Ratio_Analysis.png" alt="Ratios and Analysis Tab" onerror="this.parentElement.innerHTML='<div style=\'background:#E8F5F1;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#777;\'>Ratio Analysis</div>'"/>
-              <div class="report-overlay"><div class="report-name">Ratios & Analysis</div></div>
-            </div>
-            <div class="report-thumb">
-              <img src="LIYM_Raw_Data.png" alt="Raw IRS Form 990 Data" onerror="this.parentElement.innerHTML='<div style=\'background:#E8F5F1;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#777;\'>Raw Data</div>'"/>
-              <div class="report-overlay"><div class="report-name">IRS Form 990 Raw Data</div></div>
-            </div>
-          </div>
-          <!-- Right: description + KPIs + critique -->
-          <div class="liym-body">
-            <div>
-              <div class="feat-skills-title" style="margin-bottom:8px;">About This Project</div>
-              <div style="font-size:13.5px; color:var(--ink-soft); line-height:1.8; font-weight:300;">
-                A 5-year financial health analysis for a real New York nonprofit, built entirely from public <strong>IRS Form 990 filings</strong> sourced via ProPublica's Nonprofit Explorer. Structured across three purpose-built tabs — Raw Data, Ratios & Analysis, and a board-ready Summary Dashboard — this project demonstrates the ability to take raw regulatory filings and transform them into the kind of analysis nonprofit boards actually use to answer: <em>"Are we financially sustainable?"</em>
-              </div>
-
-              <!-- KPI cards -->
-              <div class="liym-kpi-grid">
-                <div class="liym-kpi">
-                  <div class="liym-kpi-num">78.3%</div>
-                  <div class="liym-kpi-label">Revenue Growth 2024</div>
-                </div>
-                <div class="liym-kpi">
-                  <div class="liym-kpi-num">88.3%</div>
-                  <div class="liym-kpi-label">Program Efficiency<br><span style="color:var(--teal); font-size:10px;">vs 75% benchmark</span></div>
-                </div>
-                <div class="liym-kpi">
-                  <div class="liym-kpi-num">25.3</div>
-                  <div class="liym-kpi-label">Months Operating Reserve<br><span style="color:var(--teal); font-size:10px;">target: 3–6 months</span></div>
-                </div>
-              </div>
-
-              <!-- CPA critique callout -->
-              <div class="liym-critique">
-                <div class="liym-critique-label">⚠ CPA Peer Feedback — Incorporated</div>
-                <div class="liym-critique-text">A CPA reviewer noted that deeper analysis would benefit from additional metrics — including a <strong>liquidity ratio</strong> (liquid assets vs. monthly expenses) to distinguish truly liquid reserves from illiquid net assets like property, and a <strong>fundraising efficiency ratio</strong> (fundraising expense vs. revenue raised) to complete the sustainability picture. These are valid enhancements that would be added in a client-facing engagement.</div>
-              </div>
-            </div>
-
-            <div class="feat-skills-title" style="margin-top:20px; margin-bottom:8px;">Skills Demonstrated</div>
-            <div class="feat-skill-list">
-              <span class="feat-skill">IRS Form 990 Interpretation</span>
-              <span class="feat-skill">Financial Ratio Analysis</span>
-              <span class="feat-skill">Google Sheets Formulas</span>
-              <span class="feat-skill">Data Visualization</span>
-              <span class="feat-skill">Nonprofit Benchmarking</span>
-              <span class="feat-skill">FASB ASC 958</span>
-              <span class="feat-skill">Board-Level Reporting</span>
-              <span class="feat-skill">Executive Summary Writing</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
+  <div style="height:80px;"></div>
 </div>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-label fade-up">
-    <h2>Contact</h2>
-    <span>Get in Touch</span>
-  </div>
-  <div class="contact-grid fade-up">
-    <div>
-      <div class="contact-intro">
-        <h3>Let's work together</h3>
-        <p>I'm currently accepting new remote clients and open to bookkeeping, finance, and AI-related roles. If you need clean books, accurate reports, or a reliable finance professional on your team, let's talk.</p>
-      </div>
-      <div class="contact-details">
-        <div class="contact-row">
-          <div class="contact-icon-box" style="color:white;">✉</div>
-          <div>
-            <div class="contact-detail-label">Email</div>
-            <div class="contact-detail-value"><a href="mailto:musyokacarolinenduku@gmail.com" style="color:var(--ink); text-decoration:none;">musyokacarolinenduku@gmail.com</a></div>
-          </div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-icon-box" style="color:white;">☎</div>
-          <div>
-            <div class="contact-detail-label">Phone / WhatsApp</div>
-            <div class="contact-detail-value">+254 768 546 326</div>
-          </div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-icon-box" style="color:white;">⌖</div>
-          <div>
-            <div class="contact-detail-label">Location</div>
-            <div class="contact-detail-value">Nairobi, Kenya — Remote Worldwide</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="availability-box">
-      <div class="avail-title">Current Availability</div>
-      <div class="avail-status">
-        <div class="avail-dot"></div>
-        Open to New Clients
-      </div>
-      <ul class="avail-list">
-        <li>Remote bookkeeping (ongoing or one-off)</li>
-        <li>QuickBooks Online setup & cleanup</li>
-        <li>Financial reporting & Excel dashboards</li>
-        <li>Finance & accounting roles (remote)</li>
-        <li>AI data annotation & related roles</li>
-      </ul>
-      <a href="https://linkedin.com/in/caroline-musyoka" class="portfolio-link" target="_blank">Connect on LinkedIn →</a>
-    </div>
+  <div class="contact-title">Ready to see your books like this?</div>
+  <p class="contact-sub">I'm currently accepting new clients — nonprofits, small businesses, and remote teams. Reach out and let's talk about what your books need.</p>
+  <div class="contact-row">
+    <a href="mailto:musyokacarolinenduku@gmail.com?subject=Bookkeeping%20Inquiry" class="contact-pill">✉ musyokacarolinenduku@gmail.com</a>
+    <a href="tel:+254768546326" class="contact-pill">☎ +254 768 546 326</a>
+    <a href="https://linkedin.com/in/caroline-musyoka" target="_blank" class="contact-pill">in LinkedIn</a>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-name">Caroline Musyoka</div>
-  <div class="footer-copy">QuickBooks Certified Bookkeeper · Nairobi, Kenya</div>
-</footer>
+<footer><p>Caroline Musyoka — QuickBooks & Xero Certified Bookkeeper — Nairobi, Kenya</p></footer>
 
 <script>
-  // Scroll fade-in
-  const fadeEls = document.querySelectorAll('.fade-up');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      }
-    });
-  }, { threshold: 0.1 });
-  fadeEls.forEach(el => observer.observe(el));
+document.querySelectorAll('.evidence-img img').forEach(img=>{
+  img.addEventListener('click',()=>window.open(img.src,'_blank'));
+});
 </script>
 
 </body>
